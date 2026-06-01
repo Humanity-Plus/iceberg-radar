@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iceberg Radar — Daily Reports</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --accent: #d6552b;
+    --rule: #e5e1d8;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141a;
+      --fg: #e8e6df;
+      --muted: #8a8a8a;
+      --accent: #ff7a3d;
+      --rule: #2a2a33;
+      --card: #1c1c24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header { margin-bottom: 32px; }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .tagline { color: var(--muted); margin: 0; }
+  .blurb {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 24px 0 32px;
+  }
+  .blurb p { margin: 0; color: var(--muted); }
+  ul.reports {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--rule);
+  }
+  ul.reports li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  ul.reports a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  ul.reports a:hover { text-decoration: underline; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .muted a { color: var(--muted); }
+  footer {
+    margin-top: 48px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>🧊 Iceberg Radar</h1>
+    <p class="tagline">Daily tech, innovation &amp; geopolitics scan.</p>
+  </header>
+  <div class="blurb">
+    <p>Mental model: <em>iceberg spotting</em> — disruptive tech and geopolitical
+    events as icebergs that startups need to steer clear of when ideating.
+    Sections: Iceberg Watch · Innovation Pulse · Startup &amp; Capital ·
+    Macro &amp; Geopolitics · Watch List.</p>
+  </div>
+  <ul class="reports">
+      <li><a href="reports/2026-06-01.html">Mon Jun 1, 2026</a> <span class="muted">[<a href="reports/2026-06-01.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-31.html">Sun May 31, 2026</a> <span class="muted">[<a href="reports/2026-05-31.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-29.html">Fri May 29, 2026</a> <span class="muted">[<a href="reports/2026-05-29.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-28.html">Thu May 28, 2026</a> <span class="muted">[<a href="reports/2026-05-28.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-27.html">Wed May 27, 2026</a> <span class="muted">[<a href="reports/2026-05-27.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-26.html">Tue May 26, 2026</a> <span class="muted">[<a href="reports/2026-05-26.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-25.html">Mon May 25, 2026</a> <span class="muted">[<a href="reports/2026-05-25.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-24.html">Sun May 24, 2026</a> <span class="muted">[<a href="reports/2026-05-24.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-22.html">Fri May 22, 2026</a> <span class="muted">[<a href="reports/2026-05-22.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-21.html">Thu May 21, 2026</a> <span class="muted">[<a href="reports/2026-05-21.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-20.html">Wed May 20, 2026</a> <span class="muted">[<a href="reports/2026-05-20.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-19.html">Tue May 19, 2026</a> <span class="muted">[<a href="reports/2026-05-19.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-18.html">Mon May 18, 2026</a> <span class="muted">[<a href="reports/2026-05-18.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-17.html">Sun May 17, 2026</a> <span class="muted">[<a href="reports/2026-05-17.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-16.html">Sat May 16, 2026</a> <span class="muted">[<a href="reports/2026-05-16.md">md</a>]</span></li>
+      <li><a href="reports/2026-05-15.html">Fri May 15, 2026</a> <span class="muted">[<a href="reports/2026-05-15.md">md</a>]</span></li>
+  </ul>
+  <footer>
+    Updated 2026-06-01 23:47 UTC · 16 reports ·
+    <a href="https://github.com/Humanity-Plus/iceberg-radar">source</a>
+  </footer>
+</main>
+</body>
+</html>

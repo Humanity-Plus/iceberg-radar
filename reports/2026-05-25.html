@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar — Monday, May 25, 2026</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --accent: #d6552b;
+    --rule: #e5e1d8;
+    --card: #ffffff;
+    --tag-bg: #f0ece2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141a;
+      --fg: #ececec;
+      --muted: #9a9a9a;
+      --accent: #ff8a4c;
+      --rule: #2a2a35;
+      --card: #1c1c24;
+      --tag-bg: #2a2a35;
+    }
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Inter", "Helvetica Neue", Arial, sans-serif;
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header .sub { color: var(--muted); font-size: 14px; }
+  header .meta { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  section { margin: 32px 0; }
+  h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: -0.005em; }
+  ul.items { list-style: none; padding: 0; margin: 0; }
+  li.item {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 0 0 10px;
+  }
+  li.item a.title {
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15.5px;
+    line-height: 1.35;
+    border-bottom: 1px solid transparent;
+  }
+  li.item a.title:hover { border-bottom-color: var(--accent); color: var(--accent); }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+  .meta-row .tag {
+    background: var(--tag-bg);
+    border-radius: 6px;
+    padding: 1px 7px;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .summary { color: var(--fg); margin: 8px 0 0; font-size: 14px; line-height: 1.5; }
+  .impact { margin: 8px 0 0; padding: 8px 10px; border-left: 3px solid var(--accent);
+            background: var(--tag-bg); border-radius: 0 6px 6px 0; font-size: 13.5px;
+            color: var(--fg); }
+  .impact b { color: var(--accent); font-weight: 600; }
+  .systems { margin: 8px 0 0; padding: 8px 10px; border-left: 3px solid #6b8aff;
+             background: var(--tag-bg); border-radius: 0 6px 6px 0; font-size: 13.5px;
+             color: var(--fg); }
+  .systems b { color: #6b8aff; font-weight: 600; }
+  @media (prefers-color-scheme: dark) {
+    .systems { border-left-color: #8aa7ff; }
+    .systems b { color: #a7bbff; }
+  }
+  .topics { margin: 8px 0 0; padding-left: 18px; font-size: 13.5px; color: var(--fg); }
+  .topics li { margin: 2px 0; }
+  .empty { color: var(--muted); font-size: 13px; font-style: italic; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Radar — Monday, May 25, 2026</h1>
+    <div class="sub">Daily iceberg watch · innovation · capital · macro</div>
+    <div class="meta">Generated 2026-05-25 05:04 UTC · mode: weekday</div>
+  </header>
+
+  <section id="iceberg_watch">
+    <h2>🧊 Iceberg Watch</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://arxiv.org/abs/2605.06445" target="_blank" rel="noopener">Constraint Decay: The Fragility of LLM Agents in Back End Code Generation</a>
+        <div class="meta-row">
+          <span class="tag">Hacker News Frontpage</span>
+<span>2026-05-24</span>          <span class="tag">score 7</span>
+        </div>
+        <p class="summary">A study benchmarking LLM coding agents across 100 backend generation tasks finds 'constraint decay': as structural requirements (architecture, ORMs, frameworks) accumulate, performance drops ~30 points, with convention-heavy frameworks like Django/FastAPI faring far worse than minimal ones like Flask, and data-layer/ORM errors dominating failures.</p>
+        <div class="impact"><b>So what →</b> Undercuts the 'AI replaces backend engineers' narrative for production systems and creates an opening for startups building constraint-aware agents, structural verifiers, and ORM-aware tooling. Expect capital to flow toward agent harnesses, static-verification middleware, and framework-specific fine-tunes rather than generic coding LLMs.</div>
+        <div class="systems"><b>Systems view →</b> If agents excel at greenfield but decay under structural constraints, the path of least resistance is to abandon convention-heavy frameworks, eroding decades of accumulated architectural wisdom encoded in Django/Rails-style conventions in favor of LLM-legible minimalism — a subtle deskilling and homogenization of software ecosystems. Second-order: junior engineers stop learning the constraint layer (ORMs, migrations, architectural patterns) because agents handle the surface, leaving fewer humans capable of auditing the brittle systems agents produce, while data-layer defects silently accumulate as technical debt in production. Third-order: as critical infrastructure gets generated by tools that demonstrably fail at structural integrity, the substrate of the digital economy becomes more fragile precisely as oversight capacity atrophies — a coordination failure where each firm's local productivity gain compounds into systemic unreliability.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://audiomass.co/?multitrack=1" target="_blank" rel="noopener">Show HN: Audiomass – a free, open-source multitrack audio editor for the web</a>
+        <div class="meta-row">
+          <span class="tag">Hacker News Frontpage</span>
+<span>2026-05-24</span>          <span class="tag">score 6</span>
+        </div>
+        <p class="summary">Audiomass is a free, open-source multitrack audio editor that runs entirely in the browser, lowering the barrier to non-trivial audio production.</p>
+        <div class="impact"><b>So what →</b> Browser-native creative tools continue to erode desktop DAW moats (Pro Tools, Logic, Ableton) and could feed a wave of AI-augmented audio startups built on top of open web audio primitives. Cheap, accessible multitrack editing accelerates the podcast/creator/voice-AI economy and pressures incumbents to unbundle.</div>
+        <div class="systems"><b>Systems view →</b> Frictionless audio editing combined with cheap voice cloning collapses the cost of producing convincing fake audio, accelerating an epistemic environment where shared sense-making degrades and trust in recordings — courtroom, journalistic, interpersonal — erodes. Second-order: a flood of AI-assisted content competes for finite attention, deepening creator precarity even as production tools democratize, and concentrating gains with the platforms and model providers rather than the makers. Third-order: provenance and authenticity infrastructure (watermarking, C2PA, identity attestation) becomes load-bearing for civic coordination, and societies without it absorb disproportionate harm.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="innovation_pulse">
+    <h2>🚀 Innovation Pulse</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://theinnermostloop.substack.com/p/welcome-to-may-24-2026" target="_blank" rel="noopener">Welcome to May 24, 2026</a>
+        <div class="meta-row">
+          <span class="tag">Innermost Loop - Wissner-Gross</span>
+<span>2026-05-24</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Wissner-Gross's May 24, 2026 digest catalogs accelerating AI recursion: Anthropic's Project Glasswing surfacing 10,000+ critical software vulnerabilities, DeepMind autonomously cracking Erdős and OEIS conjectures for hundreds of dollars each, 1-in-5 dissertations now AI-assisted, agentic coding burning 42% on CPU tool-use, plus the first Enhanced (doping-permitted) Olympics, NTSB pulling its accident database after sleuths cloned dead pilots' voices, and the consolidation of compute-adjacent giants into a proposed 'MAGNA MOBSTA' bloc.</p>
+        <ul class="topics">
+<li>Anthropic Project Glasswing surfaces 10,000+ critical software vulnerabilities</li><li>DeepMind autonomously solves Erdős and OEIS conjectures cheaply</li><li>42% of agentic coding time is CPU tool-use, not GPU</li><li>NTSB pulls accident database after AI voice-cloning of dead pilots</li><li>MAGNA MOBSTA: 11-firm compute oligopoly replacing Mag 7</li>        </ul>
+        <div class="impact"><b>So what →</b> Proof and vulnerability discovery becoming line-items collapses the moats of security firms, academic publishing, and quantitative research simultaneously — opening startup wedges in AI-native auditing, agentic-CPU optimization, and interspecies/biometric data layers, while the CIA/NSA's $9B Grace Blackwell buy and France's €1B quantum push signal compute is now treated as sovereign territory. The MAGNA MOBSTA framing previews an 11-firm oligopoly owning the recursive AI-chip-cloud-space stack, making everything downstream a rent extraction game.</div>
+        <div class="systems"><b>Systems view →</b> When proof, code-auditing, and dissertation-writing all collapse into the same model class, epistemic provenance dissolves — society loses the ability to distinguish earned understanding from generated output, gutting credentialing, peer review, and the slow social technology of trust. The NTSB retraction is the canary: capability is now forcing public-interest data offline, meaning transparency itself becomes a casualty of synthesis, while voice/biometric resurrection of the dead corrodes grief, identity, and consent posthumously. Concentration into ~11 compute-adjacent firms plus sovereign AI buildouts converts what was civil infrastructure into geopolitical leverage, and the Enhanced Olympics normalizes biological inequality as entertainment — a soft on-ramp to a tiered-human economy where longevity, cognition, and athletic augmentation track capital, not merit.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="startup_capital">
+    <h2>💸 Startup & Capital</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QT0-incandor-behavioral-intelligence-for-fraud-detection" target="_blank" rel="noopener">Incandor - Behavioral intelligence for fraud detection</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-21</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">YC-backed Incandor (Spring 2026) sells behavioral intelligence to platforms, claiming real-time identification of who is actually operating each account — targeting fraud, account takeovers, and likely bot/agent detection.</p>
+        <div class="impact"><b>So what →</b> As AI agents proliferate and credential-stuffing scales, behavioral biometrics becomes the new identity layer beneath passwords and 2FA; whoever owns the 'is this a human and which one' signal sits on rails every fintech, marketplace, and social platform must pay. Expect rapid consolidation and acquisition pressure from Stripe/Plaid/Okta-tier incumbents.</div>
+        <div class="systems"><b>Systems view →</b> Continuous behavioral surveillance — keystroke cadence, mouse dynamics, session patterns — normalizes a passive biometric dragnet that users never meaningfully consent to and cannot rotate like a password; once collected, these signatures are re-identifiable across platforms and leakable forever. Second-order: legitimate users (neurodivergent, disabled, elderly, users on assistive tech, or simply on a new device) get silently throttled or locked out by opaque ML scores with no due process, while sophisticated fraudsters train adversarial models to mimic 'human' patterns, pushing the arms race upward and concentrating trust infrastructure in a few vendors. Third-order: as agentic AI becomes legitimate (people delegating tasks to their own agents), a hard human/non-human binary collides with the actual future of computing, and the same stack quietly becomes deployable for workplace productivity scoring, dissident identification, and cross-platform deanonymization.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QSu-limrun-your-cloud-agent-can-build-mobile-apps-now" target="_blank" rel="noopener">Limrun - Your cloud agent can build mobile apps now</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-21</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Limrun (YC Spring 2026) provides cloud-hosted XCode, Android Studio and other mobile dev environments as tools for AI coding agents, letting agents build, compile and test native iOS/Android apps end-to-end.</p>
+        <div class="impact"><b>So what →</b> Removes the last serious moat around mobile development — Apple's walled toolchain — opening native app creation to any agent swarm and collapsing the cost of shipping iOS apps toward zero. Expect an explosion of agent-generated apps, pressure on App Store review infrastructure, and a new infra layer (cloud IDE-as-a-service for agents) that could become as foundational as Vercel was for web.</div>
+        <div class="systems"><b>Systems view →</b> When agents can mass-produce native mobile apps, the App Stores become the next epistemic battleground: low-effort scam apps, dark-pattern engagement traps, and AI-generated clones flood discovery surfaces faster than human reviewers or platform policy can adapt. Mobile developer labor — already a globally distributed middle-class profession — gets compressed, while value concentrates in whoever owns the agent runtime and the device OS rents (Apple/Google tax on a 100x larger app supply). Downstream: more attention-extracting apps in more pockets, harder attribution of who built what when something harms a user, and weakened software liability as 'an agent did it' becomes a plausible legal shield.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/" target="_blank" rel="noopener">Everyone is navigating AI security in real time — even Google</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-05-24</span>          <span class="tag">score 5</span>
+        </div>
+        <p class="summary">Google Cloud COO Francis de Souza argues AI security must be platform-level, not bolted-on, citing breach-to-handoff times collapsing from 8 hours to 22 seconds and agents exposing forgotten data repositories. Meanwhile Google itself is shipping the problem: developers hit with five-figure bills from compromised Maps API keys silently scoped to Gemini, auto-tier upgrades overriding spending caps, and a 23-minute revocation window attackers exploit to exfiltrate data.</p>
+        <div class="impact"><b>So what →</b> Massive opening for AI-native SOC startups, agentic defense platforms, and credential-revocation/observability tools — security spend will explode as enterprises confront agents crawling decade-old SharePoints. Hyperscaler trust is cracking visibly, which accelerates multicloud, sovereign cloud, and self-hosted inference plays, and gives challengers (Anthropic, Mistral, regional clouds) a wedge against Google's incumbency.</div>
+        <div class="systems"><b>Systems view →</b> Agentic defense fighting agentic offense at machine speed removes humans from the loop on decisions that shape information access, employment, and liability — concentrating power in whoever controls the defense agents while making breaches more catastrophic when they slip through. The 23-minute revocation gap reveals a deeper pattern: platform economics reward uptime and revenue capture over user safety, so unilateral scope-expansions and auto-tier-upgrades become normalized externalities borne by small developers, eroding the trust substrate that the whole cloud economy depends on. Second-order: 'bug-pocalypse' talent shortage drives further consolidation toward a few mega-platforms, while forgotten-data exposure by roaming agents will trigger a wave of privacy harms (medical, HR, legal) that existing governance frameworks cannot metabolize fast enough.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/05/24/xreal-googles-smartglasses-partner-thinks-it-has-finally-mastered-this-notoriously-tricky-industry/" target="_blank" rel="noopener">Xreal, Google’s smartglasses partner, thinks it has finally mastered this notoriously tricky industry</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-05-24</span>          <span class="tag">score 5</span>
+        </div>
+        <p class="summary">Xreal, Google's smart glasses partner, is launching Project Aura — wired OLED smart glasses tethered to a pocket 'puck' — and its CEO claims the industry is finally hitting an inflection point after years of losses, with an IPO planned before year-end and break-even projected for next year.</p>
+        <div class="impact"><b>So what →</b> If smart glasses cross the utility threshold, they become the next computing substrate after the phone, redirecting the attention economy from screens to overlaid reality and reshuffling ad, search, and OS power toward whoever owns the face-worn stack (Google/Xreal vs Meta vs Apple). A successful Xreal IPO would also validate Chinese-origin XR hardware in US markets right as US-China tech decoupling intensifies, opening a wedge for component, optics, and spatial-software startups.</div>
+        <div class="systems"><b>Systems view →</b> Always-on face cameras and persistent visual overlays collapse the last private layer of physical space — every conversation, street, and child becomes machine-readable training data, accelerating surveillance capitalism and the erosion of consent-based public life. Holographic content 'only you can see' fragments shared reality further than phones already have: two people in the same room inhabit different epistemic environments, weakening the substrate for collective sense-making and democratic deliberation. Second-order: attention capture migrates from a device you can put down to a device fused to your visual cortex, deepening dopamine dependency, atrophying unmediated presence, and concentrating cognitive infrastructure in a handful of platform owners who now mediate not just what you see online but what you see, period.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="macro_geopolitics">
+    <h2>🌍 Macro & Geopolitics</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/24/gps-jammed-on-raf-jet-carrying-uk-defence-secretary-close-to-russian-border" target="_blank" rel="noopener">GPS jammed on RAF jet carrying UK defence secretary close to Russian border</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-24</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">An RAF jet carrying UK Defence Secretary John Healey had its GPS jammed for the entire three-hour flight back from Estonia, with Russia suspected; pilots switched to backup navigation. The incident follows recent aggressive Russian intercepts of an RAF Rivet Joint spy plane over the Black Sea and prior jamming of Grant Shapps' flight in 2024.</p>
+        <div class="impact"><b>So what →</b> Routine GNSS denial against NATO ministerial aircraft normalizes electronic warfare as a peacetime coercion tool, accelerating demand for resilient PNT alternatives — eLoran, quantum inertial navigation, visual/terrain-relative nav, LEO-based PNT (Xona, Iridium STL). Expect a wave of defense-tech capital and startup formation around anti-jam GPS, sovereign timing infrastructure, and hardened civilian aviation/maritime navigation as the GPS monoculture's fragility becomes undeniable.</div>
+        <div class="systems"><b>Systems view →</b> GNSS underpins not just navigation but global financial timestamping, power grid synchronization, telecoms, and logistics — gray-zone jamming that's tolerated against military targets establishes precedent and capability for cascading civilian disruption (Baltic shipping near-misses are already rising). Second-order: each provocation absorbed without response trains both sides that the escalation ladder has missing rungs, raising the probability of a miscalculated incident that forces NATO Article 5 ambiguity. Third-order: epistemically, citizens learn their critical infrastructure is silently contested daily, eroding the perceived peace/war binary and accelerating securitization of civilian tech stacks, while attention and defense budgets crowd out climate and ecological coordination at exactly the moment those need scaling.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/24/iran-leader-and-security-council-still-need-to-approve-peace-deal-with-us" target="_blank" rel="noopener">US and Iran inch closer to peace deal as Trump faces criticism from GOP hawks</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-24</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Trump is on the verge of a US-Iran peace deal offering sanctions relief and ~$20bn in unfrozen assets (partly conditional on enriched uranium handover) in exchange for reopening the Strait of Hormuz, 60-day nuclear negotiations starting June 5 in Pakistan, and a ceasefire including Israel halting its Lebanon offensive. GOP hawks are revolting, Netanyahu is being strong-armed into acceptance, and Khamenei still needs to ratify.</p>
+        <div class="impact"><b>So what →</b> Reopening Hormuz collapses the oil risk premium, kills the inflation spike, and rewires Gulf capital flows — expect a rush of Western infrastructure, energy, and fintech plays into a thawing Iran, plus Pakistani diplomatic capital surging. Israel's forced de-escalation and Gulf-Turkey-Egypt coordination signal a post-American-unipolar Middle East where regional powers broker outcomes, weakening the AIPAC-defense-industrial axis and opening space for China to deepen its Iran-Saudi mediation playbook.</div>
+        <div class="systems"><b>Systems view →</b> A deal that trades frozen assets for uranium creates a precedent that nuclear brinkmanship pays — accelerating proliferation incentives for Saudi, Turkey, and others who watched Iran get rewarded for enrichment. The epistemic environment is degraded further: a president who launched a war he now calls a mistake, then claims credit for ending it, trains populations to accept reality-as-narrative-whiplash, eroding the shared sense-making needed for democratic accountability on war powers. Second-order: Netanyahu's domestic coalition may fracture violently, Hezbollah and IRGC hardliners may sabotage to preserve identity/relevance, and the unfrozen $20bn flows into a regime with no incentive to liberalize — entrenching authoritarian capital while Iranian civil society, which bore the war's costs, gets nothing.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/24/republican-hawks-trump-deal-iran" target="_blank" rel="noopener">Republican lawmakers warn of ‘disastrous mistake’ as Trump nears deal with Iran</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-24</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Republican hawks including Cruz, Graham, Cotton, and Wicker are publicly rebuking Trump over a draft Iran deal that would impose a 60-day ceasefire, reopen the Strait of Hormuz, lift the US naval blockade, and defer the nuclear question — with no commitment from Tehran to abandon enrichment. Trump is now hedging publicly after the backlash, insisting the deal isn't finalized.</p>
+        <div class="impact"><b>So what →</b> A deal that ends the war without dismantling Iran's nuclear program cements Tehran as the dominant Gulf power and signals that closing Hormuz is a viable coercive tool — inviting copycat chokepoint strategies from Houthis, Russia in the Black Sea, China around Taiwan. Expect a re-rating of energy, shipping insurance, and Gulf sovereign risk; defense primes lose the Iran tailwind while Israel-aligned capital accelerates independent strike capability and a regional nuclear hedge from Saudi/UAE/Turkey.</div>
+        <div class="systems"><b>Systems view →</b> A war launched on maximalist terms and ended on minimalist ones corrodes the epistemic substrate of US foreign policy — voters, allies, and adversaries all learn that stated red lines are negotiable theater, which raises the bar for credible deterrence everywhere and makes future brinkmanship more likely, not less. The MAGA-hawk fracture visible here is a coordination failure inside the hegemon: factional foreign policy by social-media reaction degrades the slow institutional machinery (State, Pentagon planning, alliance management) that prevents miscalculation, while normalizing war-as-spectacle desensitizes publics and accelerates the drift toward a multipolar order without functioning guardrails. Second-order: a nuclear-capable Iran perceived as victorious triggers Gulf proliferation cascades and harder Chinese/Russian alignment with Tehran; third-order: the global commons (Hormuz, Suez, Malacca, Taiwan Strait) get reframed as leverage rather than shared infrastructure, raising the friction cost of every physical good on Earth.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/24/russia-hits-kyiv-ukraine-hypersonic-ballistic-missile" target="_blank" rel="noopener">Russia hits Kyiv with hypersonic ballistic missile in ‘deranged’ attack</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-24</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Russia launched a massive overnight assault on Kyiv and surrounding regions using 600 drones and 90 missiles, including its hypersonic Oreshnik ballistic missile for only the third time in the war, killing at least four and injuring around 100. Strikes hit water infrastructure, a market, schools, residential buildings, the National Art Museum, and Ukraine's foreign ministry.</p>
+        <div class="impact"><b>So what →</b> Repeated operational use of Oreshnik normalizes hypersonic ballistic missiles as conventional warfighting tools, eroding the taboo and pressuring NATO air defense procurement — accelerating capital flows into counter-hypersonic interceptors, layered air defense (think Israeli-style stacks), and AI-driven drone-swarm interception startups. The targeting of cultural institutions and civilian infrastructure signals a shift toward identity-erasure warfare, which will harden European defense budgets and likely trigger a new wave of dual-use deeptech funding.</div>
+        <div class="systems"><b>Systems view →</b> Routine deployment of nuclear-capable hypersonics in conventional strikes collapses the firebreak between strategic and tactical weapons, raising miscalculation risk across every nuclear dyad watching — China-Taiwan, India-Pakistan, Iran-Israel — and rewriting deterrence assumptions that have held since 1945. Deliberate destruction of cultural heritage and civilian utilities is a long-arc attack on epistemic and social cohesion: it generates refugee flows, erodes shared European identity-of-the-victim narratives over time as fatigue sets in, and trains a generation of military planners globally that targeting civilian meaning-infrastructure is operationally acceptable. Meanwhile the defense-industrial flywheel spinning up around this war concentrates capital and political power in a narrow primes-plus-deeptech complex whose incentives now structurally favor protracted, technologically escalating conflict over negotiated settlement.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="watch_list">
+    <h2>👀 Watch List</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/24/alberta-separation-referendum-canada" target="_blank" rel="noopener">Echoes of Brexit as Alberta blunders towards vote on separation from Canada</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-24</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Alberta Premier Danielle Smith has called a referendum on holding a binding referendum on secession from Canada, mirroring Brexit dynamics — an embattled leader appeasing party hardliners while vowing to campaign against the very vote she triggered. The convoluted question has alienated both federalists and separatists, and arrives as the US openly muses about undermining or annexing Canada.</p>
+        <div class="impact"><b>So what →</b> A serious Alberta secession push could fracture Canada's energy-exporting core, destabilize NAFTA-successor trade flows, and hand Washington leverage over critical minerals, oil sands, and Arctic sovereignty at a moment when Trump-era annexation talk is no longer rhetorical. Expect capital flight risk premiums on Canadian assets, accelerated US-aligned lobbying inside Alberta, and a template other resource-rich subnational regions (Western Australia, Texas, Catalonia 2.0) will study.</div>
+        <div class="systems"><b>Systems view →</b> The deeper pattern is that referendum-as-internal-party-management is becoming a globally replicable failure mode: leaders weaponize binary votes to manage factional pressure, then lose control of the epistemic environment as grievance entrepreneurs, foreign influence operations, and algorithmically-amplified identity politics fill the vacuum. Second-order effects include erosion of trust in deliberative democracy itself, normalization of secession as a political bargaining chip in resource-rich regions, and the hollowing out of federal-level coordination capacity precisely when continental-scale problems (climate, US coercion, AI governance) demand it. Third-order: a Canada weakened or partitioned shifts the North American balance toward a more unilateral US, reduces the number of mid-power democracies capable of independent foreign policy, and accelerates a world where civilizational coordination is done by fewer, larger, more coercive actors.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/business/2026/may/24/oil-markets-danger-zone-us-iran-deal" target="_blank" rel="noopener">With oil markets nearing the danger zone, a US-Iran deal can’t come soon enough</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-24</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Three months into Trump's Operation Epic Fury and Iran's closure of the Strait of Hormuz, oil markets are approaching a non-linear tipping point: OECD commercial inventories are draining at record pace and could hit operational stress levels by end of June, potentially pushing Brent to $130–140 and forcing demand destruction. The shock is now metastasizing beyond crude into LNG, fertilisers, refined products, and shipping, with US households already $300 poorer from gasoline alone.</p>
+        <div class="impact"><b>So what →</b> A forced demand-destruction event would detonate a global stagflationary recession, gut emerging-market debt sustainability, and hand China leverage as the marginal stockpile holder. Expect a capital rotation into energy security plays — domestic refining, fertiliser substitutes, nuclear/SMR, synthetic fuels, shipping insurance, and Hormuz-bypass infrastructure — plus a political accelerant for resource-nationalist regimes and a body blow to the energy transition as governments scramble for any molecule that burns.</div>
+        <div class="systems"><b>Systems view →</b> A fertiliser and diesel squeeze cascades into food price shocks across import-dependent Global South nations, where the 2022 playbook showed how quickly that converts into hunger, migration pressure, and regime instability — the violence is exported to the people least responsible for it. Epistemically, markets 'softening on rumours of a deal' while inventories quietly empty is a textbook case of price signals decoupling from physical reality, the same pattern that produced 1973 and 2008; traders front-run headlines while the actual system marches toward a cliff no one is incentivised to name. Longer term, every acute energy shock entrenches the incumbent fossil order (strategic reserves, drilling permits, LNG buildout) at the expense of transition capital, while concentrating geopolitical power in whoever controls chokepoints, refining capacity, and stockpiles — a coordination failure where short-term survival logic locks civilisation into the very dependency that created the fragility.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/24/iran-ceasefire-deal-us-strait-of-hormuz" target="_blank" rel="noopener">What may be included in proposed Iran ceasefire deal?</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-24</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Trump claims a US-Iran ceasefire MOU is largely negotiated: a 60-day truce reopening the Strait of Hormuz toll-free, Iran resuming oil exports and clearing mines, US lifting its port blockade, some Iranian assets unfrozen, and revived nuclear talks. Iran has not agreed to surrender its highly enriched uranium stockpile, and missile programs and proxy support remain unaddressed.</p>
+        <div class="impact"><b>So what →</b> A reopened Hormuz collapses the war-risk premium on oil, repricing energy equities, shipping, and inflation expectations globally — bearish for US shale and LNG bulls, bullish for Asian importers and Gulf petrostates rebuilding trade routes. An ambiguous nuclear clause leaves Iran a threshold state, accelerating Saudi/Turkish/Egyptian hedging toward their own programs and creating a new market for sovereign-grade nuclear monitoring, dual-use export controls, and maritime de-mining tech.</div>
+        <div class="systems"><b>Systems view →</b> A 60-day pause without dismantling enrichment, missiles, or proxy networks freezes a metastable equilibrium where each party arms for round two — the deal becomes infrastructure for the next war, not its prevention. Epistemically, competing US/Iranian readouts (Hormuz 'open' vs. 'under Iranian control') normalize parallel realities in great-power diplomacy, eroding any shared baseline for verification and inviting misreads that can cascade into kinetic escalation. Second-order: Gulf states quietly pursue latent nuclear capability, the NPT regime hollows further, and the precedent — that bombing a near-threshold state yields concessions but not disarmament — instructs every other aspiring proliferator on the optimal posture.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QSc-synphony-automating-agriculture-with-robots" target="_blank" rel="noopener">Synphony - Automating Agriculture With Robots</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-21</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Synphony (YC Spring 2026) is deploying robots to automate strawberry harvesting with plans to expand to other crops, offered as a robotics + SaaS play in agriculture.</p>
+        <div class="impact"><b>So what →</b> Strawberry picking is one of the last labor-intensive holdouts in produce; cracking it unlocks a template for automating most specialty crops and pressures the H-2A/migrant labor economics that underpin US and EU fresh produce. Expect a wave of crop-specific robotics startups and downstream consolidation as growers who can afford robot fleets squeeze out smaller farms.</div>
+        <div class="systems"><b>Systems view →</b> Farm labor automation collapses the bargaining power of millions of seasonal agricultural workers — a population already politically voiceless — and removes one of the few remaining migration-driven income pipelines from Latin America to the US, with cascading effects on remittance economies. Capital concentration accelerates as only well-financed agribusinesses can afford robot fleets and the SaaS lock-in that comes with them, deepening the corporate-vs-family-farm divide and giving a handful of vendors monopsony-like control over food production data. Second-order: monoculture optimization intensifies (robots prefer uniform fields), eroding agrobiodiversity and resilience to climate shocks, while displaced workers face few reskilling paths in rural economies already gutted by prior automation waves.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QSi-fuchsia-vanta-for-hardware" target="_blank" rel="noopener">Fuchsia | Vanta for hardware</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-21</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Fuchsia (YC Spring 2026) is building a Vanta-style automated compliance platform for hardware companies, targeting robotics and industrial sectors where certifications (FCC, CE, UL, ISO, etc.) are slow, manual, and expensive.</p>
+        <div class="impact"><b>So what →</b> If hardware compliance becomes a SaaS-speed workflow, the barrier to launching robotics, drones, medical devices, and industrial AI hardware drops sharply — accelerating the hardware startup boom already riding on cheap actuators and embodied AI. Expect a Vanta-like category winner to become critical infrastructure for the coming wave of Western re-industrialization and defense-tech, and a likely acquisition target for incumbents like UL or TÜV.</div>
+        <div class="systems"><b>Systems view →</b> Compliance-as-a-service tools optimize for passing audits, not for the underlying safety reality they were designed to enforce — as the layer abstracts, regulators lose ground-truth signal and failure modes shift from 'uncertified' to 'certified-but-hollow,' mirroring what SOC2 automation did to security theater. Lowering the cost of shipping hardware also lowers the cost of shipping bad hardware: more dual-use robotics, surveillance devices, and lithium-laden consumer junk reach market faster, externalizing e-waste, energy, and extraction costs onto ecosystems already strained. Third-order: a thin software layer mediating between physical-world risk and state regulators concentrates epistemic power in a private vendor whose incentives are throughput, not public safety.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QSg-whip-social-feed-of-interactive-ai-apps-and-games" target="_blank" rel="noopener">Whip - Social feed of interactive AI apps and games</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-21</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Scroll, play, remix, and publish interactive creations from your phone.</p>
+        <div class="impact"><b>So what →</b> _(LLM enrichment unavailable for this item — showing source lede only.)_</div>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    Radar · iceberg-spotting for ideation · feed it back into <code>radar/trends/</code> over time.
+  </footer>
+</div>
+</body>
+</html>

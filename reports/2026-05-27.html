@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar — Wednesday, May 27, 2026</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --accent: #d6552b;
+    --rule: #e5e1d8;
+    --card: #ffffff;
+    --tag-bg: #f0ece2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141a;
+      --fg: #ececec;
+      --muted: #9a9a9a;
+      --accent: #ff8a4c;
+      --rule: #2a2a35;
+      --card: #1c1c24;
+      --tag-bg: #2a2a35;
+    }
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Inter", "Helvetica Neue", Arial, sans-serif;
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header .sub { color: var(--muted); font-size: 14px; }
+  header .meta { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  section { margin: 32px 0; }
+  h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: -0.005em; }
+  ul.items { list-style: none; padding: 0; margin: 0; }
+  li.item {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 0 0 10px;
+  }
+  li.item a.title {
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15.5px;
+    line-height: 1.35;
+    border-bottom: 1px solid transparent;
+  }
+  li.item a.title:hover { border-bottom-color: var(--accent); color: var(--accent); }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+  .meta-row .tag {
+    background: var(--tag-bg);
+    border-radius: 6px;
+    padding: 1px 7px;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .summary { color: var(--fg); margin: 8px 0 0; font-size: 14px; line-height: 1.5; }
+  .impact { margin: 8px 0 0; padding: 8px 10px; border-left: 3px solid var(--accent);
+            background: var(--tag-bg); border-radius: 0 6px 6px 0; font-size: 13.5px;
+            color: var(--fg); }
+  .impact b { color: var(--accent); font-weight: 600; }
+  .systems { margin: 8px 0 0; padding: 8px 10px; border-left: 3px solid #6b8aff;
+             background: var(--tag-bg); border-radius: 0 6px 6px 0; font-size: 13.5px;
+             color: var(--fg); }
+  .systems b { color: #6b8aff; font-weight: 600; }
+  @media (prefers-color-scheme: dark) {
+    .systems { border-left-color: #8aa7ff; }
+    .systems b { color: #a7bbff; }
+  }
+  .topics { margin: 8px 0 0; padding-left: 18px; font-size: 13.5px; color: var(--fg); }
+  .topics li { margin: 2px 0; }
+  .empty { color: var(--muted); font-size: 13px; font-style: italic; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Radar — Wednesday, May 27, 2026</h1>
+    <div class="sub">Daily iceberg watch · innovation · capital · macro</div>
+    <div class="meta">Generated 2026-05-27 05:04 UTC · mode: weekday</div>
+  </header>
+
+  <section id="iceberg_watch">
+    <h2>🧊 Iceberg Watch</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.minicor.com/" target="_blank" rel="noopener">Launch HN: Minicor (YC P26) – Windows desktop automations at scale</a>
+        <div class="meta-row">
+          <span class="tag">Hacker News Frontpage</span>
+<span>2026-05-26</span>          <span class="tag">score 6</span>
+        </div>
+        <p class="summary">Minicor (YC P26) is an RPA platform using self-healing computer-use agents to automate legacy Windows desktop apps (EHRs, ERPs, DMS) that lack APIs, claiming 93-96% click accuracy vs 80-85% for raw computer-use models by storing workflows as deterministic code and using agents only for recovery. Already running in healthcare at 25,000 patients/day.</p>
+        <div class="impact"><b>So what →</b> This is the connective tissue that lets AI startups sell into the $T+ legacy enterprise stack without waiting for incumbents to ship APIs — effectively a hostile bypass of vendor lock-in at Epic, CDK, SAP. Expect a wave of vertical AI agents suddenly going to market in healthcare/auto/logistics, and a counter-move from legacy vendors to legally or technically block screen-scraping agents.</div>
+        <div class="systems"><b>Systems view →</b> The 'API bypass via agent' pattern erodes the last technical chokepoint slowing AI penetration into safety-critical workflows like clinical orders and claims — meaning a 4-7% click-error rate now compounds across millions of patient interactions with no human in the loop and diffuse accountability when the agent misclicks a lab order. Second-order: it accelerates white-collar displacement in exactly the back-office roles (medical coders, claims processors, dealership admins) that are stable middle-class jobs in non-coastal economies, while concentrating margin upward to AI vendors and YC-backed middleware. Third-order: legacy vendors will retaliate with anti-automation ToS and UI obfuscation, triggering an arms race that makes enterprise software deliberately more hostile to interoperability — the opposite of the open-protocol future, and a governance vacuum where no regulator owns 'the agent clicked wrong.'</div>
+      </li>
+    </ul>
+  </section>
+  <section id="innovation_pulse">
+    <h2>🚀 Innovation Pulse</h2>
+    <div class="empty">Nothing surfaced today.</div>
+  </section>
+  <section id="startup_capital">
+    <h2>💸 Startup & Capital</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QX4-asendia-ai-clone-your-best-recruiters-into-ai-agents" target="_blank" rel="noopener">Asendia AI: clone your best recruiters into AI Agents</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-26</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">YC-backed Asendia AI sells AI agents that clone top recruiters to source, screen, and interview candidates at scale. The pitch: replicate your best human recruiter's judgment as software and run it across the entire top-of-funnel.</p>
+        <div class="impact"><b>So what →</b> If recruiter cloning works, mid-market recruiting teams collapse into a single ops person plus agents, gutting a multi-billion-dollar staffing industry and pushing ATS incumbents (Greenhouse, Lever, Workday) into existential repositioning. Expect a cambrian explosion of vertical 'clone your best X' agent startups — SDRs, analysts, paralegals — where the moat becomes proprietary behavioral capture of top performers, not the model itself.</div>
+        <div class="systems"><b>Systems view →</b> Hiring becomes an adversarial AI loop: candidate agents optimize résumés and interview answers against recruiter agents, hollowing out the signal value of the entire credentialing and interview stack while pricing out humans who can't afford the tooling. Cloning 'your best recruiter' encodes that recruiter's biases at industrial scale and launders them through algorithmic legitimacy, making discrimination both harder to detect and harder to litigate, while the labor displacement hits a female-dominated profession with little political cover. Deeper still, the framing that a person's judgment is a checkpoint to be 'cloned' and discarded normalizes treating expert humans as training data — accelerating a broader civilizational shift where tacit knowledge is extracted once, then the knower is economically obsolete.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QWx-stablebrowse-browser-layer-for-ai-agents" target="_blank" rel="noopener">StableBrowse - Browser Layer For AI Agents</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-26</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">StableBrowse (YC Spring 2026) is launching a browser infrastructure layer purpose-built for AI agents, claiming 70% token reduction and 4x faster web navigation versus standard headless-browser approaches.</p>
+        <div class="impact"><b>So what →</b> Cheaper, faster agent browsing collapses the cost floor for autonomous web workers, accelerating the shift from human-driven SaaS to agent-driven API-less automation. Expect a wave of vertical agent startups built on top, plus mounting tension with sites whose business models assume human eyeballs, ads, and rate limits.</div>
+        <div class="systems"><b>Systems view →</b> When agents become the dominant web traffic, the open web's economic substrate — ads, attention, human-readable UX — erodes, pushing publishers toward paywalls, bot-blocking, or collapse, which concentrates information access among entities that can pay for API deals. Epistemically, a web optimized for agent consumption degrades shared human sense-making: humans increasingly receive synthesized agent outputs rather than encountering primary sources, compounding homogenization and hallucination drift. Second-order: labor displacement in knowledge work accelerates as agent ops become commodity-priced, and adversarial use (scraping, fraud, influence ops, credential stuffing) scales proportionally, outpacing governance and the CAPTCHA/trust infrastructure designed for a human web.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/05/26/spacexs-starlink-nabs-american-airlines-contract-another-win-for-its-ipo/" target="_blank" rel="noopener">SpaceX’s Starlink nabs American Airlines contract, another win for its IPO</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-05-26</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">American Airlines will install Starlink on 500+ narrow-body Airbus aircraft starting early 2027, joining United, Southwest, Qatar, Lufthansa, British Airways, and Alaska as Starlink airline customers ahead of SpaceX's record-breaking IPO next month.</p>
+        <div class="impact"><b>So what →</b> Starlink is locking in the inflight connectivity market before Amazon's Project Kuiper can scale, turning LEO broadband into a near-monopoly cash engine that will fund Starship and underwrite the largest IPO in history. Expect SpaceX's post-IPO war chest to reshape defense contracting, launch markets, and sovereign telecom dependencies — every nation flying Starlink-equipped jets becomes structurally tied to Musk's infrastructure.</div>
+        <div class="systems"><b>Systems view →</b> A single private actor consolidating control over orbital communications creates a chokepoint with no democratic accountability — Starlink has already been weaponized (Ukraine throttling) and an IPO won't change who pulls the switch, just adds shareholder pressure to monetize that leverage. LEO megaconstellations also externalize costs: atmospheric aluminum oxide from reentries, light pollution destroying ground astronomy, Kessler-syndrome risk, and crowding out smaller-nation space access. Culturally, ubiquitous inflight connectivity erases one of the last unreachable spaces, accelerating the always-on attention economy into the final 11 hours humans had offline.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/" target="_blank" rel="noopener">OpenRouter more than doubles valuation to $1.3B in a year</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-05-26</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">OpenRouter raised $113M Series B led by CapitalG at a $1.3B post-money valuation, more than doubling in a year. Its AI gateway routes between 400+ models, now processing 100 trillion tokens/month — 5x growth in six months — signaling enterprises refuse single-vendor lock-in.</p>
+        <div class="impact"><b>So what →</b> Model-agnostic routing layers commoditize frontier labs, compressing their pricing power and shifting margin to the orchestration tier — bad news for OpenAI/Anthropic's moat thesis, good news for open-weight and Chinese models like DeepSeek getting equal shelf space. Expect a wave of vertical gateway startups (legal, medical, code) and acquisition pressure as hyperscalers realize whoever owns the router owns the demand curve.</div>
+        <div class="systems"><b>Systems view →</b> When models become invisible swappable engines, accountability dissolves: users won't know which model generated which output, making bias audits, safety evals, and liability attribution nearly impossible across jurisdictions. Routing optimizes for cost and benchmark scores, which silently selects for whichever lab cuts corners hardest on alignment, safety testing, or labor conditions — a race-to-the-bottom hidden behind an API. Second-order: gateways centralize a new chokepoint over global cognition (100T tokens/month of human reasoning passes through one company's routing logic), and CapitalG's stake means Alphabet quietly gains telemetry on competitor model usage patterns, an epistemic and competitive asymmetry that regulators aren't equipped to see.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="macro_geopolitics">
+    <h2>🌍 Macro & Geopolitics</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/27/iceland-foreign-minister-thorgerthur-katrin-gunnarsdottir-brexit-moment-eu-accession-referendum" target="_blank" rel="noopener">Iceland’s foreign minister fears ‘Brexit moment’ in country’s EU accession referendum</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-27</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Iceland's foreign minister Þorgerður Katrín Gunnarsdóttir warns the August 29 referendum on resuming EU accession talks risks becoming a 'Brexit moment' due to misinformation, AI-driven manipulation, and suspected Russian interference. The referendum was accelerated from 2027 partly in response to US threats to forcibly acquire Greenland, signaling a broader realignment of small Nordic states away from Washington.</p>
+        <div class="impact"><b>So what →</b> A yes vote would expand the EU's Arctic footprint and tighten control over critical North Atlantic fisheries, shipping lanes, and undersea cable corridors — assets that become strategic as polar ice retreats. Expect accelerated capital flows into Arctic logistics, subsea infrastructure security, and Nordic defense-tech startups, plus a template for other US allies (Canada, Denmark, Panama) hedging against an unpredictable Washington.</div>
+        <div class="systems"><b>Systems view →</b> The deeper signal is that AI-amplified information warfare has now matured into a routine input to sovereign decisions in even the smallest, highest-trust democracies — Iceland has ~390k people and ranks top globally on press freedom, yet its foreign minister is pre-emptively framing the campaign around foreign manipulation, which itself can erode domestic epistemic agency and delegitimize whichever side loses. Second-order: as the US shifts from security guarantor to territorial threat, the post-1945 alliance scaffolding fragments into transactional blocs, raising the baseline probability of miscalculation in the Arctic just as climate change opens it for extraction. Third-order: identity-laden issues like fishing become proxies for civilizational anxieties about sovereignty and meaning, and the resulting polarization hollows out the shared sense-making capacity small nations need to navigate compounding climate, AI, and geopolitical shocks.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/27/us-arms-sales-to-taiwan-pause-unlikely-due-to-iran-war-experts" target="_blank" rel="noopener">‘Makes no sense’: experts doubt pause in US arms sale to Taiwan is due to Iran war</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-27</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">A US official claimed Taiwan's $14bn arms package was paused to preserve munitions for the Iran war ('Operation Epic Fury'), but experts call this implausible since deliveries are 3–6 years out. The real concern: Trump has floated using Taiwan arms as a 'negotiating chip' with Xi, breaking longstanding policy.</p>
+        <div class="impact"><b>So what →</b> Signals Taiwan may be quietly demoted from treaty-adjacent ally to transactional bargaining asset, which could accelerate Taipei's push for indigenous defense (drones, missiles, semiconductors-as-leverage) and trigger a regional arms-race scramble across Japan, South Korea, and the Philippines. Expect capital flight from TSMC-dependent supply chains and a surge in defense-tech startups betting on a fragmented, self-reliant Indo-Pacific.</div>
+        <div class="systems"><b>Systems view →</b> Reducing Taiwan — and by extension the global semiconductor backbone — to a poker chip erodes the credibility infrastructure that has underwritten Pacific stability for 40 years, making miscalculation cheaper and war more thinkable. Second-order: allies hedge by acquiring autonomous strike and potentially nuclear-latent capabilities, dissolving the non-proliferation regime; simultaneously, the US munitions drain in Iran reveals that industrial-base hollowing has quietly capped American deterrence, a fact adversaries are now pricing in. Third-order: a world where great-power commitments are openly transactional collapses the shared epistemic frame of 'rules-based order,' pushing every middle power into permanent strategic anxiety, militarizing budgets at the expense of climate and social investment, and concentrating geopolitical agency in whichever leader is willing to be most unpredictable.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/26/iran-peace-deal-talks-us-bombing-ceasefire-strait-hormuz" target="_blank" rel="noopener">Iran remains in peace talks despite ‘bad faith’ US bombings of Iranian targets</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-26</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Iran stays in US peace talks mediated by Pakistan and Qatar despite US strikes on Iranian missile launchers and Hormuz mine-laying operations that killed four soldiers. Final sticking point is the mechanism to unlock $12bn in frozen Iranian assets, with a 60-day window to negotiate nuclear constraints and 30 days to lift the oil blockade and reopen Hormuz.</p>
+        <div class="impact"><b>So what →</b> A deal restoring Hormuz traffic and unfreezing Iranian oil exports would crater the war risk premium on Brent and re-route petrochemical capital flows, while sanctions relief could trigger a rush of European and Asian energy and infrastructure deals into Iran. An Iranian MP's explicit threat to strike Kushner and Witkoff's hotels signals that assassination of US negotiators is now an on-the-table escalation vector — a tail risk that reshapes diplomatic security and Gulf insurance markets.</div>
+        <div class="systems"><b>Systems view →</b> Normalizing mid-negotiation bombing as acceptable diplomatic behavior erodes the already-thin global norm against attacking a counterparty you're actively talking to, which raises the floor for coercion in every future negotiation (Taiwan, Ukraine, Korea). The deal architecture — frozen-asset ransom routed through third-country accounts, personalized threats against named negotiators, Truth Social surrender fantasies as official posture — collapses statecraft into reality-TV transactionalism, degrading the epistemic infrastructure that lets allies and adversaries read US intent reliably. Second-order: hardliner factions in all three capitals now know that bombing during talks doesn't break talks, which incentivizes spoiler attacks; third-order: if the $12bn unlock sets precedent, every sanctioned state learns that nuclear brinkmanship plus hostage-style leverage is the working playbook for cash extraction.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/26/czech-police-release-russian-bishop-after-white-powder-found-in-his-car" target="_blank" rel="noopener">Czech police release Russian bishop after ‘white powder’ found in his car</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-26</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Czech police released Russian Orthodox Bishop Hilarion (Grigory Alfeyev) without charge after a white powder confirmed as a banned narcotic was found in his car following an anonymous tip; Moscow called it a politically motivated setup, while Hilarion — a once-powerful church diplomat sidelined for not backing the Ukraine war — claims he was framed.</p>
+        <div class="impact"><b>So what →</b> A messy info-war flashpoint: whether genuine frame-up or genuine bust, the Kremlin gets a ready-made grievance to weaponize against an EU/NATO state hosting a large Russian diaspora, and Karlovy Vary's Russian enclave becomes a renewed intelligence and influence battleground. Expect more tit-for-tat diplomatic provocations across Central Europe as Russia leans on Orthodox Church networks abroad as soft-power and counter-narrative infrastructure.</div>
+        <div class="systems"><b>Systems view →</b> Episodes like this corrode epistemic systems: with both 'planted drugs' and 'guilty bishop' equally plausible, publics on each side retreat further into pre-committed narratives, and the truth becomes structurally unrecoverable — a small but cumulative tax on shared sense-making between Russia and Europe. Second-order, diaspora communities get squeezed between host-state suspicion and homeland instrumentalization, deepening identity fractures and making ordinary Russians abroad legible only as geopolitical assets or threats. Third-order, religious institutions continue their drift from meaning-making bodies into intelligence-adjacent state appendages, hollowing out one of the few remaining cross-border civic structures and accelerating the collapse of neutral ground where adversarial societies can still meet.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="watch_list">
+    <h2>👀 Watch List</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QWs-integuru-generate-fast-reliable-apis-for-any-platform" target="_blank" rel="noopener">Integuru ⚡️ Generate fast, reliable APIs for any platform</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-26</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">Integuru (YC W24) builds tooling that auto-generates fast, reliable APIs for platforms that don't expose them, so AI agents can programmatically control any external system. It's infrastructure for the agent economy — turning every website and SaaS tool into an agent-callable endpoint.</p>
+        <div class="impact"><b>So what →</b> If agents can reliably drive any platform without official API support, the moat of 'closed' SaaS evaporates and a new layer of agent-native middleware captures the value. Expect a wave of vertical agent startups built on top, plus an arms race between platforms blocking unauthorized automation and the scrapers/reverse-engineers feeding agent infrastructure.</div>
+        <div class="systems"><b>Systems view →</b> Universal agent access to any system collapses the friction that currently throttles automated economic activity, which accelerates labor displacement in knowledge work far faster than retraining or policy can absorb. It also weaponizes the long tail of platforms: fraud, scraping, market manipulation, and coordinated inauthentic behavior all get cheaper, while platforms respond with heavier identity verification and bot-detection regimes that further erode pseudonymity and raise the floor for participation. Third-order: as agent-to-agent traffic dominates, human-readable interfaces decay, shared epistemic surfaces (the open web, public-facing UIs) become hostile or paywalled, and economic coordination concentrates in whoever owns the agent-orchestration layer.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QWj-superset-the-open-source-ide-for-the-ai-agents-era" target="_blank" rel="noopener">Superset - the open source IDE for the AI Agents era</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-26</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">Superset is an open-source agentic IDE positioning itself as the developer environment for the AI-agents era, claiming 11K GitHub stars and thousands of daily active users out of YC Spring 2026.</p>
+        <div class="impact"><b>So what →</b> Open-source agentic IDEs threaten Cursor/Windsurf/Copilot's moat by commoditizing the agent-orchestration layer and letting enterprises self-host with their own models — accelerating the shift from IDE-as-editor to IDE-as-autonomous-coding-runtime. If it wins mindshare, the bottleneck for software creation moves from typing to specification, compressing engineering team sizes and reshaping where venture capital flows in devtools.</div>
+        <div class="systems"><b>Systems view →</b> Agentic IDEs accelerate the deskilling of software engineering: junior developers lose the apprenticeship path of reading and writing code line-by-line, hollowing out the talent pipeline while concentrating leverage with whoever owns the foundation models underneath. Epistemically, codebases become harder to audit as agent-generated layers accrete, increasing systemic fragility in critical infrastructure (finance, health, defense) where no human fully understands what's running. Labor displacement in a previously safe-haven profession compresses wages globally and removes a key route to middle-class formation in emerging economies (India, Eastern Europe, LatAm) whose IT services economies were built on the very work agents now automate.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QWa-twolabs-humanoid-robots-for-caregiving" target="_blank" rel="noopener">Twolabs - Humanoid robots for caregiving</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-26</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">YC Spring 2026 batch company Twolabs is building socially intelligent humanoid robots to assist the elderly. Positioned at the intersection of robotics and AI for eldercare.</p>
+        <div class="impact"><b>So what →</b> Validates that humanoid eldercare is now a fundable YC-stage thesis, not a 2030s moonshot — expect a wave of caregiving-humanoid startups chasing Japan, Korea, and Western aging demographics. If unit economics work, this unlocks a trillion-dollar labor-substitution market and reshapes immigration politics around care work.</div>
+        <div class="systems"><b>Systems view →</b> Outsourcing elder companionship to machines accelerates the atomization of multigenerational bonds and normalizes synthetic intimacy at life's most vulnerable stage — meaning and dignity get optimized into compliance metrics. Second-order: care-worker labor markets (heavily migrant, female, low-wage) collapse just as aging societies need fiscal relief, concentrating capital in robot landlords while displaced workers lack reskilling pathways. Third-order: governments lean on humanoids to paper over the demographic crisis rather than fix fertility, housing, or community collapse, and elders' last social contact becomes a data-harvesting surface owned by a few platforms.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/05/26/dutch-government-blocks-us-company-from-acquisition-citing-risk-to-public-interest/" target="_blank" rel="noopener">Dutch government blocks US company from acquisition, citing ‘risk to public interest’</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-05-26</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">The Dutch government blocked Kyndryl's acquisition of Solvinity, the Dutch cloud provider hosting national identity platform DigiD, citing public interest risk. The concern: U.S. extraterritorial law (CLOUD Act) could force disclosure of Dutch citizens' identity data regardless of EU protections.</p>
+        <div class="impact"><b>So what →</b> This signals a hardening of European digital sovereignty into hard veto power, not just rhetoric — expect a wave of similar blocks on US acquisitions of EU critical infrastructure, fueling a sovereign-cloud startup boom (Gaia-X-style players, EU-only identity stacks, confidential computing vendors). Capital flows reroute: US hyperscalers face an addressable-market ceiling in Europe, while domestic European infra providers get a protectionist tailwind worth billions.</div>
+        <div class="systems"><b>Systems view →</b> The fragmentation of the global cloud into sovereign blocs accelerates the splinternet, raising compliance overhead and shrinking the interoperability surface that made the internet a coordination substrate — small countries and startups pay the tax while incumbents in each bloc entrench. Identity infrastructure becoming a geopolitical chess piece means citizens' legal personhood is increasingly contingent on great-power relations, a fragile dependency in an era of unpredictable US policy. Third-order: as trust in cross-border digital systems erodes, the shared epistemic and economic fabric for things like climate coordination, pandemic response, and AI governance weakens precisely when civilizational problems demand more coordination, not less.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/05/26/amazon-fulfillment-competitor-stord-raises-250m-at-3b-valuation/" target="_blank" rel="noopener">Amazon fulfillment competitor Stord raises $250M at $3B valuation</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-05-26</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Stord, an e-commerce fulfillment startup positioning itself as an anti-Amazon alternative, raised $250M at a $3B valuation, doubling its valuation in a year. It operates warehouses plus inventory software and recently added an AI interface, drawing attention from Google Cloud.</p>
+        <div class="impact"><b>So what →</b> A well-capitalized neutral fulfillment layer could let mid-market brands escape Amazon's customer-data capture and marketplace tax, eroding Amazon's logistics moat just as 30-minute delivery becomes table stakes. Expect consolidation of 3PLs into AI-orchestrated networks, and a new battleground where agentic commerce buyers route orders through whichever fulfillment API is fastest and cheapest.</div>
+        <div class="systems"><b>Systems view →</b> Compressing fulfillment to AI-orchestrated same-day delivery further normalizes hyper-consumption, externalizing carbon, packaging waste, and warehouse-labor strain onto systems already under stress. As warehousing becomes a software-defined utility, the remaining human workers face tighter algorithmic pacing and easier substitution by robotics, accelerating a labor displacement curve that current safety nets aren't built for. Capital concentration also shifts: 'anti-Amazon' rhetoric masks that the same VC pools (Founders Fund, Kleiner, Baillie Gifford) own both sides, so the competitive theater hides an oligopoly of logistics capital shaping what brands and consumers can even choose.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/26/iran-internet-blackout" target="_blank" rel="noopener">Iran’s access to global internet starts to resume after 88-day blackout</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-26</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Iran is restoring global internet access after a record 88-day blackout that isolated the country for 2,093 hours, cost millions of jobs, and provided cover for a wartime security crackdown including dozens of executions. Restoration is gradual and selective, sitting at under 10% of pre-shutdown levels, and proceeded despite a court order questioning the authority of the cyberspace taskforce that ordered it.</p>
+        <div class="impact"><b>So what →</b> Sets a precedent that authoritarian regimes can sustain near-total internet shutdowns for months without regime collapse, normalizing the kill-switch as a counter-protest tool and creating demand for sovereign-internet stacks, mesh networks, satellite bypass (Starlink-style), and censorship-resistant payment rails. Expect accelerated capital flow into circumvention tech, Iranian elite/talent emigration into Gulf and Turkish startup ecosystems, and a hardening of the splinternet thesis that reshapes cloud, CDN, and compliance geography.</div>
+        <div class="systems"><b>Systems view →</b> An 88-day blackout is a live experiment proving that a modern state can decouple ~90 million people from global epistemics with tolerable regime cost — once demonstrated, the playbook propagates to other fragile autocracies and even to democracies under 'emergency' framings, ratcheting down the global baseline of connectivity rights. Second-order: the executions carried out under information darkness show how kill-switches convert into atrocity-enablers by severing the witness layer, while the economic carnage (5m jobs, food inflation, female rural workers hit hardest) compounds into migration pressure, brain drain, and a generation whose meaning-making is forged in isolation and grievance. Third-order: circumvention tech becomes dual-use — the same satellite and mesh stacks that liberate Iranians also let cartels, sanctioned actors, and future juntas route around any governance, while the splinternet fractures shared sense-making infrastructure that climate, pandemic, and AI-risk coordination quietly depend on.</div>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    Radar · iceberg-spotting for ideation · feed it back into <code>radar/trends/</code> over time.
+  </footer>
+</div>
+</body>
+</html>

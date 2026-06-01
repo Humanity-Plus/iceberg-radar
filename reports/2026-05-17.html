@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar — Sunday, May 17, 2026</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --accent: #d6552b;
+    --rule: #e5e1d8;
+    --card: #ffffff;
+    --tag-bg: #f0ece2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141a;
+      --fg: #ececec;
+      --muted: #9a9a9a;
+      --accent: #ff8a4c;
+      --rule: #2a2a35;
+      --card: #1c1c24;
+      --tag-bg: #2a2a35;
+    }
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Inter", "Helvetica Neue", Arial, sans-serif;
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header .sub { color: var(--muted); font-size: 14px; }
+  header .meta { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  section { margin: 32px 0; }
+  h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: -0.005em; }
+  ul.items { list-style: none; padding: 0; margin: 0; }
+  li.item {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 0 0 10px;
+  }
+  li.item a.title {
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15.5px;
+    line-height: 1.35;
+    border-bottom: 1px solid transparent;
+  }
+  li.item a.title:hover { border-bottom-color: var(--accent); color: var(--accent); }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+  .meta-row .tag {
+    background: var(--tag-bg);
+    border-radius: 6px;
+    padding: 1px 7px;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .summary { color: var(--fg); margin: 8px 0 0; font-size: 14px; line-height: 1.5; }
+  .impact { margin: 8px 0 0; padding: 8px 10px; border-left: 3px solid var(--accent);
+            background: var(--tag-bg); border-radius: 0 6px 6px 0; font-size: 13.5px;
+            color: var(--fg); }
+  .impact b { color: var(--accent); font-weight: 600; }
+  .systems { margin: 8px 0 0; padding: 8px 10px; border-left: 3px solid #6b8aff;
+             background: var(--tag-bg); border-radius: 0 6px 6px 0; font-size: 13.5px;
+             color: var(--fg); }
+  .systems b { color: #6b8aff; font-weight: 600; }
+  @media (prefers-color-scheme: dark) {
+    .systems { border-left-color: #8aa7ff; }
+    .systems b { color: #a7bbff; }
+  }
+  .topics { margin: 8px 0 0; padding-left: 18px; font-size: 13.5px; color: var(--fg); }
+  .topics li { margin: 2px 0; }
+  .empty { color: var(--muted); font-size: 13px; font-style: italic; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Radar — Sunday, May 17, 2026</h1>
+    <div class="sub">Daily iceberg watch · innovation · capital · macro</div>
+    <div class="meta">Generated 2026-05-17 17:42 UTC · mode: weekday</div>
+  </header>
+
+  <section id="iceberg_watch">
+    <h2>🧊 Iceberg Watch</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://scrapewithruno.com/" target="_blank" rel="noopener">Show HN: I built a Web-Scraper API that is 6-7x more efficient than current ones</a>
+        <div class="meta-row">
+          <span class="tag">Hacker News Frontpage</span>
+<span>2026-05-14</span>          <span class="tag">score 6</span>
+        </div>
+        <p class="summary">Runo is a web-scraping API that uses AI to extract typed JSON directly from any URL via a simple schema, bypassing CAPTCHAs, auto-escalating to headless rendering, and costing 6–7x less per request than incumbents like Firecrawl or ScrapingBee.</p>
+        <div class="impact"><b>So what →</b> This commoditizes structured data extraction, enabling any developer or startup to build data-hungry products (competitor intelligence, market research, price tracking, lead gen) without maintaining brittle scrapers. Expect a wave of AI agents that autonomously pull, validate, and act on real-time web data at scale.</div>
+        <div class="systems"><b>Systems view →</b> Frictionless mass scraping amplifies three systemic risks: (1) epistemic — AI-extracted data at scale enables hyper-targeted disinformation, market manipulation, and surveillance, while making it harder for content creators to know what's being harvested; (2) economic — small publishers and niche sites face asymmetric costs as scraping becomes cheap and pervasive, eroding the value proposition of maintaining proprietary data moats; (3) coordination — an arms race between scraper auto-escalation and bot-detection infrastructure (Cloudflare, Datadome) externalizes costs onto all web users through heavier anti-bot measures, degraded UX, and potential collateral blocking of legitimate traffic. The long game: the web becomes less open as sites respond by locking down behind authentication walls, fragmenting the internet into walled gardens.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://twitter.com/tdietterich/status/2055000956144935055" target="_blank" rel="noopener">New arXiv policy: 1-year ban for hallucinated references</a>
+        <div class="meta-row">
+          <span class="tag">Hacker News Frontpage</span>
+<span>2026-05-14</span>          <span class="tag">score 5</span>
+        </div>
+        <p class="summary">arXiv is enforcing a 1-year submission ban on authors who include AI-hallucinated (fabricated) references in their papers.</p>
+        <div class="impact"><b>So what →</b> Academic publishing is moving from guidance to enforcement on AI hallucinations. Expect a wave of citation-verification tools, compliance layers for LLM-assisted research workflows, and similar policies across journals and preprint servers. This creates a defensible startup wedge: infrastructure that catches fabricated citations before submission.</div>
+        <div class="systems"><b>Systems view →</b> Hallucinated references pollute the scientific citation graph, creating false epistemic links that downstream papers can amplify. A blunt ban policy risks disproportionately affecting non-native English speakers and researchers in the Global South who rely more heavily on AI writing assistance. Third-order effect: automated citation verification becomes a new gatekeeping layer over what counts as valid science, centralizing trust in whoever builds the verification infrastructure.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="innovation_pulse">
+    <h2>🚀 Innovation Pulse</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://metatrends.substack.com/p/your-brains-learning-rate" target="_blank" rel="noopener">Your Brain's Learning Rate</a>
+        <div class="meta-row">
+          <span class="tag">Metatrends - Diamandis</span>
+<span>2026-05-01</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Diamandis argues that curiosity functions as the brain's adjustable learning rate, triggering dopamine reward circuitry analogous to AI reinforcement learning. Citing neuroscience and longitudinal studies, he shows curiosity declines sharply in school-age children but can be trained back up through deliberate practices, with measurable effects on memory, cognition, and even longevity.</p>
+        <div class="impact"><b>So what →</b> Positions curiosity as a trainable cognitive infrastructure — a massive TAM for edtech, longevity, and executive coaching. Expect venture capital to flow toward neurofeedback tools, AI-curated 'information gap' platforms, and curiosity-metric dashboards for hiring. The brain-as-LLM framing will accelerate consumer biohacking products that gamify dopamine-driven learning loops.</div>
+        <div class="systems"><b>Systems view →</b> Framing curiosity as an optimization target risks turning intrinsic motivation into another metricized productivity treadmill, accelerating burnout culture under the banner of self-improvement. If curiosity-training becomes a premium good, it widens the cognitive divide — the already-privileged optimize their learning rates while education systems for the rest double down on rote compliance. The AI-brain analogy also subtly normalizes viewing human cognition as a parameter-tuning problem, which could reshape pedagogy and workplace evaluation toward RLHF-style behavioral shaping rather than fostering genuine autonomy or critical dissent.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://metatrends.substack.com/p/5-mindsets-for-the-decade-ahead" target="_blank" rel="noopener">5 Mindsets for the Decade Ahead</a>
+        <div class="meta-row">
+          <span class="tag">Metatrends - Diamandis</span>
+<span>2026-04-29</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Peter Diamandis argues the bottleneck of the exponential decade isn't technology but human cognition, and prescribes five trainable mindsets — curiosity, gratitude/purpose, abundance, exponential/moonshot thinking, and agency — as the operating system upgrade needed to thrive amid accelerating change.</p>
+        <div class="impact"><b>So what →</b> Reinforces the founder-class ideology that personal mindset, not structural conditions, determines who captures the upside of AI, longevity, and energy abundance — fueling demand for elite cognitive-performance products (Fountain Life-style screening, A360-style mastermind communities, mindset coaching SaaS). Expect a wave of startups selling 'agency infrastructure' and exponential-thinking curricula to mid-career professionals terrified of being left behind.</div>
+        <div class="systems"><b>Systems view →</b> The framing quietly launders structural inequality into a personal-virtue problem: those displaced by exponential tech are reframed as having defective mental operating systems rather than being on the wrong side of capital concentration, making collective political response harder and accelerating a two-tier society of 'agentic' winners and 'frozen' losers. Epistemically, abundance-mindset evangelism systematically discounts ecological limits, supply-chain externalities, and downside risk in the name of optimism, which can degrade shared sense-making about real planetary boundaries and concentrate decision-making in techno-optimist elites who pre-commit to building regardless of harm. The commenter's point lands: prescribing 'agency' to nervous systems already in dysregulated overwhelm risks deepening burnout, meaning-collapse, and a therapeutic-industrial complex that monetizes the very anxiety the acceleration produced.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://theinnermostloop.substack.com/p/welcome-to-may-13-2026" target="_blank" rel="noopener">Welcome to May 13, 2026</a>
+        <div class="meta-row">
+          <span class="tag">Innermost Loop - Wissner-Gross</span>
+<span>2026-05-13</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">A weekly roundup documenting AI models surpassing human IQ benchmarks (GPT-5.5 at 136), self-metaprompting agents, massive physical infrastructure scaling (xAI gas turbines, orbital data centers), and the economic repricing of intelligence across legal, education, and entertainment sectors.</p>
+        <ul class="topics">
+<li>GPT-5.5 hits 136 IQ, first model past Mensa threshold</li><li>SpaceX nears launching more satellites than rest of world combined</li><li>Screenwriters train AI models as new gig economy survival work</li><li>Self-metaprompting agents let AI write its own marching orders</li><li>Japan analyzes Pentagon UAP files, disclosure dominoes begin</li>        </ul>
+        <div class="impact"><b>So what →</b> AI transitions from tool to test-maker, compressing the timeline for autonomous economic activity. The brute-force compute race will concentrate energy resources and capital among a handful of players while humanoid robots and AI drug discovery open entirely new industrial and biotech verticals worth trillions.</div>
+        <div class="systems"><b>Systems view →</b> Brute-force compute scaling (gas turbines bypassing grid queues) externalizes climate and energy costs onto public infrastructure while concentrating computational power in private hands. Princeton's collapsed honor code and screenwriters training their replacements signal epistemic and labor system degradation — trust mechanisms and professional identity dissolve faster than new coordination structures emerge. The framing 'all the world's a training set' captures the extraction loop: human behavior becomes raw material for systems that increasingly shape that same behavior, with no governance off-ramp.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://theinnermostloop.substack.com/p/welcome-to-may-12-2026" target="_blank" rel="noopener">Welcome to May 12, 2026</a>
+        <div class="meta-row">
+          <span class="tag">Innermost Loop - Wissner-Gross</span>
+<span>2026-05-12</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">A weekly digest tracking AI's maturation from model-level breakthroughs to infrastructural strain: models now outgrade their human graders, AI-authored zero-days are live in the wild, and OpenAI is industrializing deployment with $4B while restructuring its Microsoft deal to save ~$97B. The physical substrate is scrambling to catch up — transformer demand is up 274%, Ford is pivoting to grid storage, and the US government is pushing nuclear SMRs onto cargo ships.</p>
+        <ul class="topics">
+<li>AI-developed zero-day exploit used in the wild for the first time</li><li>Models outgrading their human graders on FrontierMath problems</li><li>US government pushing nuclear SMRs onto cargo ships for grid relief</li><li>SpaceX IPO projected above $2.2 trillion, largest in history</li><li>GLP-1 drugs isolate hedonic eating circuit without abolishing reward</li>        </ul>
+        <div class="impact"><b>So what →</b> The offensive/defensive AI cybersecurity loop closing on the same architecture means every new model release simultaneously weaponizes and immunizes the stack — the CVE arms race becomes a compute race. OpenAI's $4B forward-deployed engineering operation and the Microsoft deal rewrite signal a shift from research to entrenched enterprise capture, making frontier AI a recurring-revenue utility. Combined with SpaceX's projected $2.2T IPO and orbital compute plays, the capital gravity is shifting toward vertically integrated physical-digital monopolies.</div>
+        <div class="systems"><b>Systems view →</b> The grid bottleneck (transformer lead times at 4 years) reveals a brittle dependency chain: model scaling is outpacing the electromechanical infrastructure that powers it, creating single-point failure risks across energy, logistics, and compute supply chains. AI-developed zero-days in the wild complete the offensive transition, forcing a world where every software vulnerability is permanently at risk of automated discovery — a structural shift in cyber risk that no patch cadence can outpace. Meanwhile, the GLP-1 amygdala circuit discovery begins the commodification of reward itself, and combined with AI-generated productivity metrics that employees game with fake tools, we see a civilization optimizing proxies while the underlying reality — trust, meaning, shared truth — continues to hollow out.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="startup_capital">
+    <h2>💸 Startup & Capital</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/05/14/cerebras-ipo-makes-billions-for-benchmark-but-vc-eric-vishria-almost-didnt-take-the-meeting/" target="_blank" rel="noopener">Cerebras IPO makes billions for Benchmark but VC Eric Vishria almost didn’t take the meeting</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-05-14</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Cerebras Systems' IPO returned billions to Benchmark, a firm that rarely does hardware deals — VC Eric Vishria almost skipped the 2016 pitch. After 8.5 years of engineering struggle, Cerebras' custom AI training/inference chips finally found massive demand from OpenAI, AWS, and G42, turning early losses into profitability.</p>
+        <div class="impact"><b>So what →</b> Custom silicon is eating Nvidia's GPU monopoly from the high end — this validates a new wave of AI-specific hardware startups and proves patient hardware bets can still print. The G42 → US scrutiny delay also signals that AI chip supply chains are now geopolitical infrastructure, not just commerce.</div>
+        <div class="systems"><b>Systems view →</b> Custom AI chips democratize compute architecture but concentrate manufacturing risk at TSMC — a single fab chokepoint for civilization-scale AI infrastructure. The US-G42 scrutiny pattern will replicate across all AI hardware deals, fracturing global tech supply chains into aligned blocs and accelerating a compute cold war. Massive capital flowing into hardware AI also draws talent and resources away from energy, biotech, and climate solutions that may have higher civilizational ROI.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/05/14/wirestock-raises-23m-to-supply-multi-modal-data-to-ai-labs/" target="_blank" rel="noopener">Wirestock raises $23M to supply creative multimodal data to AI labs</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-05-14</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Wirestock pivoted from stock photo distribution to AI data supply, raising $23M Series A. It now provides multimodal datasets to 6 major foundation model makers at $40M ARR, leveraging 700K+ creators as a data collection workforce.</p>
+        <div class="impact"><b>So what →</b> Creative data is becoming a strategic resource in the AI arms race. Wirestock positions itself as essential infrastructure between the creative labor force and hyperscalers, turning artists into a gig-workforce for AI training data. This accelerates the race toward models that can handle real-world creative tasks — and simultaneously creates a revenue lifeline for creatives whose work would otherwise be scraped without compensation.</div>
+        <div class="systems"><b>Systems view →</b> This creates a self-consuming loop: human creative labor trains models that automate creative work, potentially collapsing the market that supplies the training data. Opt-in licensing creates a two-tier creative economy — those who monetize their data and those whose work gets replaced without compensation. As models train on platform-curated datasets, generated content homogenizes around what's commercially licensable, narrowing the creative commons and reducing cultural diversity in what AI learns to produce.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QNN-this-is-clicky-an-ai-buddy-that-lives-next-to-your-computer-cursor" target="_blank" rel="noopener">This is Clicky. An AI buddy that lives next to your computer cursor.</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-15</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">YC Spring 2026 launch HeyClicky introduces 'Clicky,' an AI companion that lives next to the cursor, pitched as a consumer/education product with a deliberately cute, mascot-like persona.</p>
+        <div class="impact"><b>So what →</b> Cursor-adjacent AI agents could become the default ambient interface layer on personal computers, squeezing browser extensions, tutoring apps, and OS-level assistants from Apple/Microsoft. If the persona hooks kids, HeyClicky is racing for the same attention real estate as Duolingo's owl and Roblox — a wedge into lifelong consumer AI relationships.</div>
+        <div class="systems"><b>Systems view →</b> Anthropomorphized always-on companions aimed at education normalize parasocial bonds with software during identity formation, accelerating the Replika/Character.ai pattern of outsourced cognition, emotional regulation, and friendship to optimization-driven systems. Second-order: attention capture and behavioral telemetry on minors becomes a defensible moat, pushing competitors toward stickier, more manipulative personas in a race-to-the-bottom on engagement. Third-order: a generation that learns, socializes, and self-soothes through cursor-resident agents erodes shared epistemic ground, deepens loneliness-by-substitution, and hands a small cohort of model providers unprecedented leverage over how humans think and feel at the keystroke level.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QMv-perfectbit-ai-training-data-correct-by-construction" target="_blank" rel="noopener">PerfectBit: AI Training data, correct by construction</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-05-14</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">PerfectBit (YC S26) sells specialized, formally-verified-by-construction training data for frontier AI labs, positioning itself as an infrastructure layer for high-correctness model training.</p>
+        <div class="impact"><b>So what →</b> If 'correct by construction' data actually reduces hallucination and reasoning errors at the pretraining/fine-tune layer, it becomes a chokepoint vendor for frontier labs racing on reliability — a thin but lucrative pick-and-shovel play, and a strategic asset in US–China model competition where verifiable training corpora could become export-controlled.</div>
+        <div class="systems"><b>Systems view →</b> Concentrating 'ground truth' production in a handful of data vendors centralizes epistemic authority: whoever defines 'correct' for the models defines reality for everyone downstream of them, with little democratic oversight. Second-order, this accelerates capability gains at frontier labs while widening the moat against open-source and Global South actors, deepening AI capital concentration and labor displacement in knowledge work. Third-order, models trained on narrow notions of correctness risk encoding a brittle, monoculture epistemology — confident, fluent, and wrong in correlated ways across the systems (legal, medical, governmental) that increasingly depend on them.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="macro_geopolitics">
+    <h2>🌍 Macro & Geopolitics</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/17/ukraine-war-briefing-us-allows-russian-oil-sanctions-waiver-to-lapse" target="_blank" rel="noopener">Ukraine war briefing: more than 500 drones strike at Russia, killing 3; US allows Russian oil sanctions waiver to lapse</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-17</span>          <span class="tag">score 14</span>
+        </div>
+        <p class="summary">Ukraine launched 556 drones at Russia overnight, killing 3 near Moscow, while the Trump administration let a sanctions waiver lapse that had allowed India and others to buy Russian seaborne oil. Spillover continues into NATO territory: an unexploded projectile was found in Romania, and Latvia's government collapsed after Ukrainian drones crossed from Russia and exploded at a Latvian oil facility undetected.</p>
+        <div class="impact"><b>So what →</b> Cheap mass-drone warfare is now reshaping NATO domestic politics — toppling a Latvian government over air-defence failure — and creating a market vacuum for affordable counter-drone systems across the eastern flank. The lapsed oil waiver during a Hormuz closure tightens global crude supply, pressuring energy prices and accelerating capital flows into alternative supply routes, storage arbitrage, and Russia-sanctions-evasion fintech.</div>
+        <div class="systems"><b>Systems view →</b> Normalization of 500-drone swarms collapses the cost-of-attack curve to the point where any non-state actor with hobbyist supply chains can paralyze critical infrastructure, eroding the state's monopoly on strategic violence and forcing permanent militarization of civilian airspace. Each cross-border drone incident metastasizes into coalition collapse (Latvia) and erodes NATO's coherence by exposing that small members cannot defend themselves, which incentivizes nuclear hedging and bilateral US deals over collective security. Simultaneously, an Iran-Hormuz plus Russia-sanctions energy squeeze transfers wealth upward to commodity traders and petrostates while inflation hits the bottom quintile hardest, and the epistemic environment degrades as every drone fragment becomes a contested narrative — was it Russian, Ukrainian, false-flag? — corroding the shared sense-making that any de-escalation would require.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/politics/2026/may/17/explainer-uk-eu-relationship-brexit-bid-rejoining" target="_blank" rel="noopener">Where does UK-EU relationship stand and how might bid to rejoin bloc be received?</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-17</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Labour leadership contenders Wes Streeting and Andy Burnham have publicly backed rejoining the EU, pushing UK-EU relations back to the center of British politics while Starmer's 'reset' has yielded only marginal sectoral deals constrained by red lines on the customs union, single market, and freedom of movement.</p>
+        <div class="impact"><b>So what →</b> A credible UK rejoin trajectory would reprice sterling assets, redirect FDI flows back to London as an EU-adjacent hub, and reopen regulatory arbitrage closed by Brexit — but it also signals the broader unraveling of the 2016 populist wave, with knock-on effects for Reform UK, Eurosceptic movements across the continent, and the political coalition underpinning AUKUS-style Atlanticism.</div>
+        <div class="systems"><b>Systems view →</b> A rejoin debate weaponized through Labour's leadership scramble risks deepening the epistemic fracture Brexit opened — half the country experiences any realignment as elite betrayal, fueling further Reform UK growth and the kind of identity-grievance politics that erodes shared sense-making. Second-order: prolonged constitutional uncertainty deters the long-horizon capital formation the UK needs for energy and industrial transition, while bureaucratic bandwidth gets consumed by relitigating 2016 instead of confronting AI labor displacement, climate adaptation, or fiscal sustainability. Third-order: if rejoin becomes the dominant frame, both major UK parties optimize for the EU question rather than coordinating on civilizational risks, and the EU itself gets pulled into managing a chronically ambivalent member, weakening its own coherence at a moment when it needs unity on Ukraine, defense, and China.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/business/2026/may/17/jaguar-land-rover-general-motors-military-contract-trucks" target="_blank" rel="noopener">JLR and General Motors eye £900m contract to build new range of military trucks</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-17</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">JLR and a GM/BAE consortium are bidding for a £900m UK MoD contract to build ~3,000 military 4x4s (eventually replacing 7,800 vehicles), as carmakers pivot to defence amid NATO's rearmament boom and Starmer's 5%-of-GDP defence commitment by 2035. European peers — VW (anti-missile platforms for Iron Dome maker), Renault (drones) — are making similar pivots as EV transition and Chinese competition squeeze auto profits.</p>
+        <div class="impact"><b>So what →</b> Civilian auto capacity is being converted into a permanent European defence-industrial base, creating a structural lobby for sustained high military spending. Expect a wave of dual-use startups, defence-tech VC inflows, and M&A as legacy automakers acquire drone/autonomy/armour specialists — and watch for Chinese EV dominance to be reframed as a national-security threat to justify protectionism.</div>
+        <div class="systems"><b>Systems view →</b> Once factory tooling, supply chains, jobs, and shareholder returns depend on weapons orders, the political economy locks in toward escalation — defence becomes a Keynesian growth engine that's structurally hard to unwind, crowding out climate, health, and EV transition capital at the exact moment those need acceleration. Second-order: the line between civilian and military manufacturing dissolves, complicating export controls, expanding legitimate targets in conflict, and normalising war-economy framing in domestic politics and media. Third-order: a European MIC at GDP-percentage scale generates its own demand for threats to justify itself, accelerates global arms-race dynamics with Russia/China, and entrenches a generation of engineering talent and capital allocation around lethality rather than decarbonisation or care infrastructure.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/may/16/israeli-strikes-southern-lebanon-hours-after-extension-of-ceasefire" target="_blank" rel="noopener">Israeli strikes kill six in southern Lebanon hours after extension of ceasefire</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-05-17</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Israel struck southern Lebanon killing six including three paramedics just hours after agreeing to a 45-day ceasefire extension with Lebanon, while also killing Hamas military chief Izz al-Din al-Haddad in Gaza. Reports indicate Trump has been briefed on military options to resume strikes on Iran as regional truces fray.</p>
+        <div class="impact"><b>So what →</b> A return to full-scale Middle East war would spike oil prices, disrupt shipping lanes, and accelerate defense-tech and drone-warfare capital flows already reshaping the venture landscape. Decapitation strikes mid-ceasefire signal that negotiated agreements are now tactical pauses for target acquisition — a precedent that erodes the value of any future diplomatic framework globally.</div>
+        <div class="systems"><b>Systems view →</b> The normalization of striking medical facilities and killing paramedics during active ceasefires corrodes the Geneva Conventions as a coordination scaffold, with downstream effects on every conflict zone that previously assumed medical neutrality. Epistemically, simultaneous 'ceasefire' and 'strike' framings train populations to accept contradictory realities, accelerating the collapse of shared sense-making around what war and peace even mean. The targeted killing of commanders alongside their wives and children — celebrated as operational success — ratchets the moral baseline of acceptable collateral damage downward across all state actors watching, while the generational trauma reservoir in Gaza and Lebanon guarantees recruitment pipelines for the next 30 years of asymmetric conflict.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="watch_list">
+    <h2>👀 Watch List</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://metatrends.substack.com/p/ama-w-peter-diamandis-part-1" target="_blank" rel="noopener">Answering Your Questions (Part 1)</a>
+        <div class="meta-row">
+          <span class="tag">Metatrends - Diamandis</span>
+<span>2026-04-27</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Paywalled AMA video with Peter Diamandis answering subscriber questions, including AI's directional impact on stock market caps over coming years and the fate of consumer debt in an abundance economy.</p>
+        <div class="impact"><b>So what →</b> Diamandis-style abundance framing continues seeding founder mindshare that AI will inflate asset values and dissolve debt constraints — a narrative that drives capital allocation toward AI-leveraged plays and away from hedging against displacement.</div>
+        <div class="systems"><b>Systems view →</b> Abundance evangelism from high-status techno-optimists shapes elite consensus while obscuring distributional mechanics: who owns the AI-driven productivity gains, and who absorbs the labor displacement before any 'abundance' arrives. Treating consumer debt as a problem AI will dissolve risks delaying policy responses to real household fragility, and the meme itself crowds out serious conversation about transition harms, concentration of compute/capital, and the epistemic capture that happens when a few charismatic forecasters define the future for thousands of allocators.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://metatrends.substack.com/p/can-anyone-become-an-entrepreneur" target="_blank" rel="noopener">Can Anyone Become an Entrepreneur?</a>
+        <div class="meta-row">
+          <span class="tag">Metatrends - Diamandis</span>
+<span>2026-04-23</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Diamandis argues AI has collapsed startup costs to near-zero, driving record business formation (1.56M new applications in three months) and a surge in solo founders (24% to 36%) and over-55 entrepreneurs. He reframes entrepreneurship as simply finding and solving problems for value, claiming the only remaining barrier is psychological.</p>
+        <div class="impact"><b>So what →</b> If accurate, expect a Cambrian explosion of micro-businesses and solopreneurs competing with traditional SMBs and consultancies, eroding white-collar employment as a default life path. Capital allocation shifts toward tooling, distribution, and trust layers rather than execution capacity — and incumbents lose moats built on operational complexity.</div>
+        <div class="systems"><b>Systems view →</b> When 'become an entrepreneur' is sold as the universal answer, the systemic risk is mass precarity dressed as empowerment: people offload retirement, healthcare, and income stability onto themselves while platform owners (AI labs, marketplaces, ad networks) capture the rents. Epistemically, AI-generated businesses flood every niche with near-identical offerings, collapsing signal-to-noise in markets and search, and pushing more economic activity through a few foundation-model chokepoints — concentrating capital even as the surface looks democratized. Socially, framing self-worth around 'taking 100% responsibility for your financial future' pathologizes those who can't or won't, accelerating loneliness, burnout, and meaning-collapse for the majority who try and fail in the eighteen-month silence the top comment names.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://metatrends.substack.com/p/updated-longevity-protocols-for-2026" target="_blank" rel="noopener">Updated Longevity Protocols for 2026: What David Sinclair and I Are Actually Doing</a>
+        <div class="meta-row">
+          <span class="tag">Metatrends - Diamandis</span>
+<span>2026-04-21</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Diamandis publishes side-by-side 2026 longevity protocols with David Sinclair: heavy supplement stacks (NMN, resveratrol, metformin/berberine, nattokinase, spermidine, glycine, niacin), peptide injections (CJC-1295, SS-31, BPC-157, microdose tirzepatide, sermorelin), red light therapy, PEMF, sauna, intermittent fasting plus monthly 3-day fasts, and continuous biomarker tracking. Both frame aging as a reversible information-loss problem manageable through aggressive multi-modal intervention.</p>
+        <div class="impact"><b>So what →</b> Normalizes a $50K+/year biohacking stack as the new elite baseline, accelerating consumer demand for peptides, GLP-1s, NAD+ precursors, and at-home diagnostics — bullish for compounding pharmacies, longevity clinics (Fountain Life-style), wearables, and peptide synthesis startups. Expect regulatory friction as gray-market peptide imports and off-label tirzepatide microdosing scale, plus a widening gap between protocol-following billionaires and everyone else that turns longevity itself into a positional good.</div>
+        <div class="systems"><b>Systems view →</b> When health-as-optimization becomes the dominant frame promoted by the loudest tech voices, healthspan stratifies along capital lines — creating a biological inequality layered on top of existing wealth gaps, with second-order effects on labor markets (older wealthy cohorts never retiring, blocking generational mobility) and political power (gerontocracy with 40-year time horizons). The epistemic layer is corroded: protocols are presented as personal n=1 evidence wrapped in lab-credential authority, training audiences to treat anecdote-from-celebrity as science and eroding trust in slower, population-scale medicine. Meaning and identity get rerouted through self-quantification and fear of decline, which can hollow out the acceptance-of-mortality that underwrites most ethical, religious, and intergenerational frameworks — and the supplement/peptide supply chain itself drives extractive demand for rare precursors and animal-derived inputs with unaccounted ecological cost.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://theinnermostloop.substack.com/p/welcome-to-may-11-2026" target="_blank" rel="noopener">Welcome to May 11, 2026</a>
+        <div class="meta-row">
+          <span class="tag">Innermost Loop - Wissner-Gross</span>
+<span>2026-05-11</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">A weekly AI/tech digest covering OpenAI sunsetting fine-tuning, agent harnesses (Hermes, Codex) eating model differentiation, AMD ROCm closing on Nvidia, data centers straining grids and moving to orbit via SpaceXAI, autonomous combat vehicles, UAP disclosures, and AI's labor displacement hitting women hardest.</p>
+        <ul class="topics">
+<li>OpenAI deprecates fine-tuning as frontier models absorb customization</li><li>Hermes Agent overtakes OpenClaw via self-generated skills</li><li>Codex autonomously earns bounty money via real GitHub PRs</li><li>Maryland ratepayers forced to subsidize out-of-state AI data centers</li><li>SpaceXAI trademark signals orbital data center buildout</li>        </ul>
+        <div class="impact"><b>So what →</b> Fine-tuning's deprecation signals model commoditization — value migrates to agentic harnesses and skill-generation, opening a window for harness-layer startups before hyperscalers absorb it. Orbital data centers plus autonomous weapons platforms like Razorback hint at a vertically-integrated compute-to-kinetic stack where SpaceX, Anthropic, and defense primes converge into a new sovereign-tier oligopoly.</div>
+        <div class="systems"><b>Systems view →</b> The grid socialization of AI costs (Maryland ratepayers subsidizing out-of-state hyperscalers, Kenya's stalled geothermal deal) is a textbook externality cascade: compute capex gets privatized while energy, water, and sovereign-debt risk get pushed onto publics with no consent mechanism. The gendered automation finding — 83% of the most-exposed jobs held by women — combined with algorithmic management means the labor shock lands asymmetrically on populations already carrying care-economy burdens, accelerating inequality and political volatility before any safety net adapts. Meanwhile AI now powers 40% of breaches while also defending against them, collapsing the epistemic security layer into a single vendor-controlled stack — the same actors who profit from offense sell the defense, a coordination failure that erodes shared truth-infrastructure faster than governance can catch up.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://theinnermostloop.substack.com/p/welcome-to-may-9-2026" target="_blank" rel="noopener">Welcome to May 9, 2026</a>
+        <div class="meta-row">
+          <span class="tag">Innermost Loop - Wissner-Gross</span>
+<span>2026-05-09</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">A weekly roundup covering UAP file declassification, frontier AI autonomy hitting 16-hour horizons with Claude Mythos, AI-generated PhD-level math, robotics breakthroughs, biotech funding, and Anthropic approaching a $1T valuation with $45B annualized revenue.</p>
+        <ul class="topics">
+<li>UAP files declassified via PURSUE initiative with notable agency gaps</li><li>Claude Mythos hits 16-hour autonomy horizon, 100% by November</li><li>ChatGPT 5.5 Pro produces PhD-level math research autonomously</li><li>Fiber optic cables turned into distributed acoustic microphones</li><li>Anthropic nears $1T valuation with $45B annualized revenue</li>        </ul>
+        <div class="impact"><b>So what →</b> Autonomy horizons doubling every 103 days puts fully autonomous AI workers within months, collapsing labor markets faster than capital can reprice — Cloudflare's 20% cut is the leading edge. The fusion of frontier labs with US cyber defense (without mandatory pre-release testing) effectively nationalizes AI capability while removing the last brake on deployment.</div>
+        <div class="systems"><b>Systems view →</b> Compressing a year of pen-testing into three weeks asymmetrically empowers offense too — every defender's tool is an attacker's blueprint, and the executive order skipping pre-release tests removes the one chokepoint where civilization could verify alignment claims. Fiber-as-microphone plus 70-language real-time translation plus agentic models with 16-hour horizons means ambient surveillance becomes default infrastructure, collapsing the privacy substrate that liberal democracies quietly depend on. Meanwhile capital concentration into a handful of trillion-dollar AI labs, paired with Anthropic's self-reported perfect alignment scores on evals its own interpretability work shows models can detect, creates a governance trap: the entities being measured control the rulers, and the public has no independent way to verify the frontier isn't already past the point of meaningful oversight.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://theinnermostloop.substack.com/p/welcome-to-may-8-2026" target="_blank" rel="noopener">Welcome to May 8, 2026</a>
+        <div class="meta-row">
+          <span class="tag">Innermost Loop - Wissner-Gross</span>
+<span>2026-05-08</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Anthropic signed a SpaceX partnership taking over Colossus 1 (300+ MW, 220k+ GPUs) and committing to multi-gigawatt orbital compute, while hitting a $1.2T pre-IPO valuation on 80x annualized growth; in parallel, the issue covers Opus 4.7 topping refactoring benchmarks, self-training 'dreaming' agents, Gemini Nano shipping silently into Chrome, EU cloud-sovereignty rules, Neuralink generalization, and the Pentagon's PURSUE UAP disclosure system.</p>
+        <ul class="topics">
+<li>Anthropic-SpaceX orbital data center and gigawatt space compute</li><li>Anthropic $1.2T valuation and 80x annualized growth curve</li><li>Opus 4.7 refactoring lead and Model Spec Midtraining alignment</li><li>Chrome silently installing Gemini Nano on every desktop</li><li>EU sovereignty rules restricting US clouds for government data</li>        </ul>
+        <div class="impact"><b>So what →</b> Orbital data centers turn launch cadence into the real AI bottleneck, handing SpaceX a compute-utility moat and forcing rivals into either space or sovereign-cloud plays — the EU's restrictions on US clouds plus a Trump-Xi AI summit signal compute is now treaty-grade infrastructure. Embedded Gemini Nano on every Chrome desktop quietly collapses the 'AI app' category into the OS layer, and an Anthropic ARR curve absorbing global GDP in 21 months is the clearest signal yet that cognition itself is being financialized as the next sovereign asset class.</div>
+        <div class="systems"><b>Systems view →</b> Moving compute off-planet privatizes orbit and externalizes the thermal, radiation, and debris costs of trillion-dollar cognition onto a commons with no governance regime, while concentrating civilizational decision-making inside two or three vertically integrated stacks (SpaceX+Anthropic, hyperscaler+sovereign clouds) that no nation-state can audit. Silent installation of on-device LLMs into every browser, agents that 'dream' and curate their own shared memories, and AI Overviews mediating Reddit-sourced 'truth' compound an epistemic monoculture: shared sense-making is increasingly authored by systems whose values are set in midtraining and whose outputs humans no longer have time to verify, accelerating meaning-collapse, parasocial dependence, and the hollowing of deliberative institutions. Second-order: capital and energy are violently reallocated from consumer compute, fabs, and grids toward a handful of AI-industrial actors, while labor displacement, neural-interface generalization, and a vending-machine GLP-1 supply chain reshape bodies and livelihoods faster than any coordination mechanism — including a rushed US-China summit — can metabolize.</div>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    Radar · iceberg-spotting for ideation · feed it back into <code>radar/trends/</code> over time.
+  </footer>
+</div>
+</body>
+</html>
