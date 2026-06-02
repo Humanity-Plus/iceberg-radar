@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar — Tuesday, June 2, 2026</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --accent: #d6552b;
+    --rule: #e5e1d8;
+    --card: #ffffff;
+    --tag-bg: #f0ece2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141a;
+      --fg: #ececec;
+      --muted: #9a9a9a;
+      --accent: #ff8a4c;
+      --rule: #2a2a35;
+      --card: #1c1c24;
+      --tag-bg: #2a2a35;
+    }
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Inter", "Helvetica Neue", Arial, sans-serif;
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header .sub { color: var(--muted); font-size: 14px; }
+  header .meta { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  section { margin: 32px 0; }
+  h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: -0.005em; }
+  ul.items { list-style: none; padding: 0; margin: 0; }
+  li.item {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 0 0 10px;
+  }
+  li.item a.title {
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15.5px;
+    line-height: 1.35;
+    border-bottom: 1px solid transparent;
+  }
+  li.item a.title:hover { border-bottom-color: var(--accent); color: var(--accent); }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+  .meta-row .tag {
+    background: var(--tag-bg);
+    border-radius: 6px;
+    padding: 1px 7px;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .summary { color: var(--fg); margin: 8px 0 0; font-size: 14px; line-height: 1.5; }
+  .impact { margin: 8px 0 0; padding: 8px 10px; border-left: 3px solid var(--accent);
+            background: var(--tag-bg); border-radius: 0 6px 6px 0; font-size: 13.5px;
+            color: var(--fg); }
+  .impact b { color: var(--accent); font-weight: 600; }
+  .systems { margin: 8px 0 0; padding: 8px 10px; border-left: 3px solid #6b8aff;
+             background: var(--tag-bg); border-radius: 0 6px 6px 0; font-size: 13.5px;
+             color: var(--fg); }
+  .systems b { color: #6b8aff; font-weight: 600; }
+  @media (prefers-color-scheme: dark) {
+    .systems { border-left-color: #8aa7ff; }
+    .systems b { color: #a7bbff; }
+  }
+  .topics { margin: 8px 0 0; padding-left: 18px; font-size: 13.5px; color: var(--fg); }
+  .topics li { margin: 2px 0; }
+  .empty { color: var(--muted); font-size: 13px; font-style: italic; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Radar — Tuesday, June 2, 2026</h1>
+    <div class="sub">Daily iceberg watch · innovation · capital · macro</div>
+    <div class="meta">Generated 2026-06-02 05:06 UTC · mode: weekday</div>
+  </header>
+
+  <section id="iceberg_watch">
+    <h2>🧊 Iceberg Watch</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/" target="_blank" rel="noopener">OpenAI frontier models and Codex are now available on AWS</a>
+        <div class="meta-row">
+          <span class="tag">Hacker News Frontpage</span>
+<span>2026-06-01</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">OpenAI's frontier models and Codex coding agent are now available on AWS, ending Microsoft Azure's exclusivity over OpenAI's flagship offerings.</p>
+        <div class="impact"><b>So what →</b> This collapses a major moat for Azure and reshuffles the AI infra landscape: enterprises locked into AWS can now build on GPT-class models natively, accelerating agentic coding adoption and intensifying the Anthropic-vs-OpenAI battle inside Bedrock. Expect a wave of AWS-native AI startups and renewed pricing pressure across hyperscaler compute.</div>
+        <div class="systems"><b>Systems view →</b> Concentrating frontier model access across all three hyperscalers deepens the dependency of the global software economy on a tiny oligopoly of compute landlords, making any future export control, outage, or policy shift a systemic shock. Codex-on-AWS accelerates the displacement of mid-tier software labor at hyperscaler scale, compressing the on-ramp for junior engineers and hollowing the talent pipeline that produces senior judgment. Epistemically, when the same handful of models write most enterprise code, bugs, biases, and ideological priors propagate as monoculture — a single poisoned weight update could cascade through critical infrastructure with no independent substrate left to cross-check it.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/06/01/nvidia-chases-200b-cpu-market-with-ai-agent-pcs-from-microsoft-dell-and-hp/" target="_blank" rel="noopener">Nvidia chases $200B CPU market with AI agent PCs from Microsoft, Dell, and HP</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-06-01</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Nvidia unveiled the RTX Spark, a 1-petaflop PC 'superchip' designed to run local AI agents and LLMs, with Windows laptops shipping this fall from Microsoft Surface, Dell, HP, Lenovo, ASUS, and MSI. Jensen Huang is pursuing a $200B CPU market beyond GPUs, betting that billions of future AI agents will need their own PC-like compute substrate.</p>
+        <div class="impact"><b>So what →</b> If agent-native PCs become the default endpoint, Nvidia captures the consumer compute layer and squeezes Intel/AMD/Qualcomm out of the post-x86 era while making local inference economically viable — undercutting cloud-AI margins for OpenAI, Anthropic, and hyperscalers. Startup opportunity shifts toward agent-native local apps, on-device fine-tuning, and sandbox/security tooling; geopolitically, this deepens TSMC dependence and accelerates the US-China hardware decoupling around CUDA lock-in.</div>
+        <div class="systems"><b>Systems view →</b> Replacing 'point and click' with 'ask and it does the work' atrophies user agency, technical literacy, and the friction that lets humans notice when software is doing something wrong — a generation raised on agent-mediated computing loses the mental models needed to audit or resist it. Local agents with persistent access to files, accounts, and credentials massively expand the attack surface for prompt injection, social engineering, and silent data exfiltration, while shifting liability onto individuals who can't possibly understand what their machine is negotiating on their behalf. Concentrating the agent runtime on Nvidia+Microsoft infrastructure creates a chokepoint over how billions of cognitive tasks get executed, deepens CUDA monoculture risk, and pulls another tranche of knowledge work into automation before labor markets, education systems, or governance have adapted.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://github.com/stanford-cs336/assignment1-basics/blob/main/CLAUDE.md" target="_blank" rel="noopener">AI Agent Guidelines for CS336 at Stanford</a>
+        <div class="meta-row">
+          <span class="tag">Hacker News Frontpage</span>
+<span>2026-06-01</span>          <span class="tag">score 7</span>
+        </div>
+        <p class="summary">Stanford's CS336 course publishes a CLAUDE.md file specifying guidelines for how AI coding agents should behave when students use them on assignment 1 (language modeling basics), signaling formal academic acknowledgment that students will use agents and must constrain them.</p>
+        <div class="impact"><b>So what →</b> Top-tier ML programs codifying agent rules-of-engagement normalizes AI-pair-programming as the default learning mode and pressures every other university to publish similar policies; expect a wave of startups selling 'classroom-safe' agent harnesses, assignment-specific guardrails, and proof-of-human-effort attestation tools.</div>
+        <div class="systems"><b>Systems view →</b> When foundational skill-building is mediated by agents, the tacit knowledge loop — struggle, debug, internalize — gets short-circuited, producing engineers who can ship but can't reason from first principles, exactly as frontier labs need more such reasoners. Epistemically, instructors lose signal on who actually understands what, forcing a shift to proctored exams or trust-based credentialing, both of which concentrate gatekeeping power. Long-run: a bifurcated talent pool where a small elite still does the hard learning and a large cohort is permanently dependent on tools owned by three companies, deepening capital and cognitive concentration.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="innovation_pulse">
+    <h2>🚀 Innovation Pulse</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://metatrends.substack.com/p/tracking-the-singularity-june-1st" target="_blank" rel="noopener">TRACKING THE SINGULARITY: JUNE 1ST</a>
+        <div class="meta-row">
+          <span class="tag">Metatrends - Diamandis</span>
+<span>2026-06-01</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">Diamandis's weekly digest covers eight stories: Anthropic's Opus 4.8 retaking coding benchmarks, Hassabis aligning AGI timeline to 2029, Amazon's voice AI shopping converting at 3.5x and going platform, the OpenAI Foundation becoming the world's largest at ~$250B, IBM/CHIPS Act $2B quantum foundry in Albany, wind+solar surpassing natural gas globally for the first time, and the Figure-vs-Tesla humanoid race accelerating.</p>
+        <ul class="topics">
+<li>OpenAI Foundation becomes world's largest philanthropy at $250B</li><li>IBM and CHIPS Act fund $2B US quantum chip foundry</li><li>Wind and solar surpass natural gas in global generation</li><li>Amazon agentic shopping platform vs Google's open commerce protocols</li><li>Hassabis tightens AGI timeline to 2029, proposes Einstein test</li>        </ul>
+        <div class="impact"><b>So what →</b> The compression of frontier-model release cycles plus a $250B AI-aligned philanthropic war chest sets up labs to dictate the terms of post-labor economic policy (UBI, public wealth funds) before governments do. A US-domiciled quantum foundry decouples the next compute substrate from Taiwan risk, and agentic commerce protocols (Amazon vertical, Google horizontal) threaten to obsolete the open web's merchant layer within 2-3 years.</div>
+        <div class="systems"><b>Systems view →</b> When a single foundation controls a quarter-trillion in AI equity and starts funding 'economic futures,' the entity displacing labor also writes the redistribution playbook — a governance capture loop where the disruptor becomes the welfare state, hollowing democratic legitimacy over fiscal policy. Agentic commerce collapses the discovery layer of the internet into a few proprietary intent-routers, accelerating attention monopolies and severing the ad-supported information commons that funds journalism and shared sense-making. Meanwhile, weekly-then-daily model release cadence outruns any human institution's capacity to evaluate alignment, safety, or labor impact, and the renewables milestone, while real, masks the extractive supply chain (lithium, cobalt, rare earths, perovskite lead) and the Jevons rebound where AI compute swallows the new clean capacity faster than it comes online.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://theinnermostloop.substack.com/p/welcome-to-june-1-2026" target="_blank" rel="noopener">Welcome to June 1, 2026</a>
+        <div class="meta-row">
+          <span class="tag">Innermost Loop - Wissner-Gross</span>
+<span>2026-06-01</span>          <span class="tag">score 8</span>
+        </div>
+        <p class="summary">A weekly roundup from Wissner-Gross spanning on-device AI models, trillion-dollar memory chip valuations, French AI data centers, plutonium-to-reactor-fuel conversion, humanoid robots headed to Ukrainian battlefields, Mars ocean evidence, GMO mosquito releases, and Anthropic's confidential IPO filing.</p>
+        <ul class="topics">
+<li>Memory chipmakers surpass oil majors in market cap</li><li>Humanoid robots headed to Ukrainian battlefield within 18 months</li><li>Plutonium from dismantled warheads becoming private reactor fuel</li><li>Anthropic confidentially files for IPO ahead of OpenAI</li><li>Rival AI super PACs flooding US midterm elections</li>        </ul>
+        <div class="impact"><b>So what →</b> The convergence of pocket-sized diffusion models, memory eclipsing oil in market value, and dueling AI super PACs signals AI infrastructure is becoming the dominant geopolitical and capital-allocation axis of the decade. Battlefield humanoid trials in Ukraine plus weapons-grade plutonium reactor fuel mark a quiet militarization-energy flywheel that will reshape defense startups and sovereign compute strategies.</div>
+        <div class="systems"><b>Systems view →</b> Memory-as-the-new-oil concentrates civilizational leverage in three Korean and US firms, deepening the same extractive-dependency pattern that oil created but with shorter, more brittle supply chains. Battlefield humanoids normalize autonomous lethality before any governance scaffolding exists, while AI super PACs capture the regulatory process itself — collapsing the epistemic commons needed to even debate the technology. On-device models plus AI pendants accelerate attentional capture and parasocial intimacy at the exact moment 'dark output' becomes uncountable, meaning the economy, the information environment, and human meaning-making all lose their measurement instruments simultaneously.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="startup_capital">
+    <h2>💸 Startup & Capital</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QdR-parrot-ai-native-os-for-auto-repair-shops" target="_blank" rel="noopener">Parrot - AI-native OS for auto repair shops</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-06-01</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">Parrot is a YC Spring 2026 B2B SaaS pitching an 'AI-native OS' for auto repair shops, with voice agents that physically call and coordinate with customers, insurers, parts suppliers, and payment processors to run the shop autonomously.</p>
+        <div class="impact"><b>So what →</b> If voice agents can actually close the loop across estimates, parts procurement, and insurance adjusters, the back-office labor of every fragmented SMB vertical (auto, HVAC, dental, legal intake) becomes a thin software margin — and a wave of vertical AI-OS roll-ups starts buying out independent operators rather than just selling them software.</div>
+        <div class="systems"><b>Systems view →</b> When AI agents call AI agents on both sides of every transaction (shop bot negotiating with insurer bot negotiating with supplier bot), human discretion and relational trust get squeezed out of local economies, and the long tail of service jobs — service writers, parts clerks, schedulers — quietly evaporates without the visibility of a factory closure. Epistemically, phone networks fill with synthetic voices indistinguishable from humans, eroding the last high-trust audio channel and creating fertile ground for fraud at civilizational scale. Power concentrates with whoever owns the vertical OS layer, turning previously independent main-street businesses into franchisees of a software landlord, which hollows out local economic agency and the civic fabric that depends on it.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/QdW-gravy-agents-for-your-personal-finances" target="_blank" rel="noopener">Gravy - Agents for your personal finances</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-06-01</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">Gravy (YC S26) is launching AI agents that connect to users' banks, investments, and email to explain personal finances and automate financial tasks.</p>
+        <div class="impact"><b>So what →</b> Agentic personal finance could compress wealth-management, bookkeeping, and robo-advisor stacks into a chat interface, threatening Mint-style aggregators, low-end RIAs, and even neobank loyalty. If agents start executing transactions autonomously, expect a land grab over OAuth-to-bank rails and a regulatory scramble around fiduciary duty for LLMs.</div>
+        <div class="systems"><b>Systems view →</b> Handing financial cognition to agents accelerates the offloading of numeracy and self-knowledge — people stop tracking their own money the way GPS killed spatial memory, deepening dependency on opaque models whose incentives align with whoever pays for distribution (lenders, brokerages, ad networks). Aggregating bank, brokerage, and email access into a single AI surface creates a honeypot for breaches and a powerful behavioral dataset that can be used for hyper-personalized price discrimination, predatory credit targeting, or political profiling. Second-order: when agents auto-execute trades and payments at population scale, correlated LLM behavior can synchronize financial decisions, amplifying herd dynamics and systemic fragility while diffusing accountability across model, app, and bank.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/06/01/alphabet-plans-to-raise-80-billion-to-pay-for-ai-buildout/" target="_blank" rel="noopener">Alphabet plans to raise $80B to pay for AI buildout</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-06-01</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Alphabet is raising $80B via a stock sale (including $10B to Berkshire Hathaway) to fund AI infrastructure, on top of $180–190B in 2026 capex. Big Tech collectively is projected to spend up to $700B on AI capex this year.</p>
+        <div class="impact"><b>So what →</b> Hyperscaler capex at this scale locks in a compute oligopoly that startups cannot challenge without sovereign or strategic capital, accelerating consolidation around a handful of foundation-model landlords. Berkshire's entry signals AI infra is now treated as a utility-grade asset class, which will pull pension and insurance capital into GPU/data-center buildouts and reshape energy markets.</div>
+        <div class="systems"><b>Systems view →</b> $700B/year flowing into compute is a massive real-economy bet whose returns depend on AI demand materializing — if it doesn't, the unwind hits public equities and pensions; if it does, the labor displacement and epistemic centralization arrive faster than governance can adapt. Power and water draw at this scale collides with grid and climate constraints, externalizing costs onto local communities and pushing nuclear/fossil expansions that lock in decades of emissions. Capital concentration in 4–5 firms that simultaneously own attention, search, advertising, and now cognition itself collapses the diversity of the epistemic commons and creates single points of failure for civilizational sense-making.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/" target="_blank" rel="noopener">Defense tech darling Mach Industries hits $1.8B valuation, a 4x jump in a year</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-06-01</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Mach Industries, a 3-year-old defense tech startup led by 22-year-old MIT dropout Ethan Thornton, raised $300M Series C at a $1.8B valuation — 4x in a year — while shipping six autonomous weapons platforms and acquiring solid rocket motor maker Exquadrum to vertically integrate a supply-constrained chokepoint.</p>
+        <div class="impact"><b>So what →</b> Vertical integration of SRMs breaks the Aerojet/Northrop duopoly and signals VC-backed primes are now credible challengers to legacy defense contractors, compressing weapons dev cycles from years to months. Expect a wave of copycat defense startups, sovereign wealth piling in, and a permanent rewiring of the military-industrial base around Silicon Valley capital and autonomous kill chains.</div>
+        <div class="systems"><b>Systems view →</b> Drone-era warfare commoditizes lethality: when a 22-year-old can stand up six autonomous weapons platforms in three years, the marginal cost of projecting violence collapses, lowering the threshold for state and non-state conflict and accelerating proliferation cascades that arms-control regimes can't track. Tech-VC capital flowing into kill chains creates structural incentives for sustained conflict (peace becomes bad for the cap table), entangles consumer-tech talent pipelines with weapons production, and normalizes autonomous targeting before societies have negotiated meaningful human-in-the-loop norms. Second-order: defense capital concentration crowds out climate/biotech funding, dual-use 'commercial applications' launder weapons R&D into civilian infrastructure, and the speed-over-safety ethos that broke social media now governs systems that decide who lives.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Proposed-80-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure-and-Compute-2026-b0myAMewCa/default.aspx" target="_blank" rel="noopener">Alphabet announces $80B equity capital raise to expand AI infra and compute</a>
+        <div class="meta-row">
+          <span class="tag">Hacker News Frontpage</span>
+<span>2026-06-01</span>          <span class="tag">score 7</span>
+        </div>
+        <p class="summary">Alphabet is raising $80 billion in equity to fund expansion of AI infrastructure and compute capacity. The scale signals a capex arms race among hyperscalers betting that compute remains the binding constraint on frontier AI.</p>
+        <div class="impact"><b>So what →</b> Equity (not just cash flow or debt) financing at this scale resets the ceiling for AI infra spend and pressures Microsoft, Meta, Amazon, and sovereigns to match or cede ground. Expect knock-on demand shocks for power, HBM, advanced packaging, and grid interconnects — and a tighter squeeze on independent labs and neoclouds that can't access this tier of capital.</div>
+        <div class="systems"><b>Systems view →</b> Concentrating tens of billions of compute capex inside a handful of US hyperscalers entrenches a oligopoly over the cognitive substrate of the next economy, hardening capital concentration and giving a few boards effective veto power over which AI capabilities exist and who accesses them. Second-order: accelerated buildout collides with constrained grids and water, pulling forward fossil generation, straining local communities near data center clusters, and crowding out electrification of housing and transport — a real ecological tax paid diffusely while gains accrue narrowly. Third-order: as labor-substituting AI scales faster than institutions can adapt, the gap between capital returns and wage income widens, epistemic infrastructure (search, assistants, media) consolidates under advertising-funded incumbents, and governance lags further behind the actors it is meant to constrain.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="macro_geopolitics">
+    <h2>🌍 Macro & Geopolitics</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/technology/2026/jun/01/meta-ai-hack-obama-sephora-instagram" target="_blank" rel="noopener">Hackers trick Meta AI support bot to infiltrate Obama White House Instagram account</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-06-01</span>          <span class="tag">score 10</span>
+        </div>
+        <p class="summary">Hackers exploited Meta's AI support chatbot to hijack high-profile Instagram accounts including Obama's White House account, Sephora, and US Space Force, by tricking the bot into linking accounts to attacker-controlled emails and triggering password resets. Meta says the issue is resolved but won't disclose scope.</p>
+        <div class="impact"><b>So what →</b> Validates a new attack surface: AI agents with action-taking permissions become the weakest link, bypassing years of hardened auth flows via natural-language social engineering. Expect a wave of red-team startups, AI-agent firewalls, and 'prompt injection insurance,' plus regulatory pressure on agentic AI deployments in finance, healthcare, and gov — and a cooling effect on enterprise rollouts of customer-facing AI agents.</div>
+        <div class="systems"><b>Systems view →</b> Platforms are racing to replace human support staff with LLM agents that hold privileged actions, collapsing the labor cost of support while transferring risk onto users who never consented to AI as their security perimeter — a classic externality. Second-order: trust in digital identity erodes further, accelerating the post-truth drift where account takeovers fuel disinfo, impersonation scams, and political manipulation at scale (an Obama-branded account is a geopolitical asset, not a vanity handle). Third-order: as every platform deploys agentic AI to cut headcount, attack surface compounds across the stack, governance lags behind deployment velocity, and the asymmetry favors attackers — a few prompt-engineers can now do what required nation-state tooling, while the displaced support workers have no recourse and users bear the breach costs.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/business/nils-pratley-on-finance/2026/jun/01/easyjet-takeover-target-castlelake-nils-pratley-may-not-be-a-flyer" target="_blank" rel="noopener">EasyJet is an obvious takeover target, but US approach may not be a flyer</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-06-01</span>          <span class="tag">score 10</span>
+        </div>
+        <p class="summary">US investment fund Castlelake has taken a 2% stake in easyJet and floated a takeover approach, but the market reaction was muted (10% bump) given valuation gaps, EU/UK majority ownership rules blocking US buyers, and founder Stelios's 15% blocking stake. Analysts peg fleet asset value at 615-650p versus a 400p share price, suggesting the play may be asset arbitrage rather than operational.</p>
+        <div class="impact"><b>So what →</b> If a US lender-turned-raider can engineer around European airline ownership rules, it opens the door to financialization of EU flag-adjacent carriers — turning airlines into aircraft-leasing arbitrage vehicles. A successful workaround precedent could accelerate US private capital absorption of European industrial assets at war-discounted prices, and force IAG/Lufthansa into defensive consolidation.</div>
+        <div class="systems"><b>Systems view →</b> Treating airlines as 'bundles of aircraft, orderbook and slot assets' is the logical endpoint of financialization — once a carrier is priced below sum-of-parts, capital extracts the parts and labor/route-network/regional connectivity become externalities. Second-order: thinner regional air links degrade economic cohesion in peripheral EU regions and concentrate aviation in hub-and-spoke oligopolies, raising prices and emissions per passenger-km even as headline efficiency improves. Third-order: sovereignty erosion as critical mobility infrastructure migrates to opaque US credit funds during a war-induced fuel-price dip, normalizing the pattern that geopolitical crises become acquisition windows for distressed European strategic assets.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/jun/02/ukraine-war-briefing-ending-war-before-winter-correct-and-realistic-says-senior-kyiv-aide" target="_blank" rel="noopener">Ukraine war briefing: Ending war before winter ‘correct and realistic’, says senior Kyiv aide</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-06-02</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Ukraine's chief of staff Kyrylo Budanov endorsed Zelenskyy's push to end the war with Russia before winter, calling it realistic given Kyiv's improved battlefield position; meanwhile Russia faces fuel shortages (banning aviation fuel exports, rationing in Crimea) as Ukrainian strikes hit logistics, and France detained a Russian shadow-fleet tanker in the Atlantic.</p>
+        <div class="impact"><b>So what →</b> A negotiated freeze before winter would lock in current lines, redirect Western capital from munitions toward reconstruction (a multi-hundred-billion market for engineering, demining, energy, and digital-state startups), and validate drone-and-strike asymmetric doctrine as the new template for mid-power deterrence. France's high-seas seizure of a sanctions-evading tanker signals an aggressive new phase of maritime sanctions enforcement that could fragment global shipping insurance, flag registries, and grey-market oil logistics.</div>
+        <div class="systems"><b>Systems view →</b> A frozen conflict rather than resolution institutionalizes a militarized European periphery, normalizing drone warfare against civilian infrastructure and seeding a permanent arms-procurement lobby that crowds out climate and social investment across the continent. Maritime interdiction of shadow fleets, while legally framed, erodes the universalist law-of-the-sea regime into a bloc-enforced one — accelerating de-dollarization, parallel insurance/registry systems, and Sino-Russian logistics integration, which weakens the coordination substrate needed for genuinely global problems like climate and pandemics. Reconstruction capital flowing into a still-contested Ukraine risks oligarchic capture and a Marshall-Plan-shaped dependency that hollows local agency, while the wartime surveillance and targeting stack (AI ISR, autonomous strike) graduates into peacetime policing and export markets with minimal governance scaffolding.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.theguardian.com/world/2026/jun/01/iran-strikes-us-military-base-kuwait-iranian-air-defences" target="_blank" rel="noopener">Iran threatens to suspend peace talks after ‘violation of ceasefire’ in Lebanon</a>
+        <div class="meta-row">
+          <span class="tag">The Guardian</span>
+<span>2026-06-01</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Iran is suspending US peace talks over Israel's Lebanon offensive, with Tehran threatening to have the Houthis re-blockade Bab al-Mandab while Trump says 'going silent' is fine and will maintain the US naval blockade on Iranian ports. Oil approached $100/barrel as Iran struck a US-linked base in Kuwait and Israel issued evacuation orders for Beirut's southern suburbs.</p>
+        <div class="impact"><b>So what →</b> A dual chokepoint squeeze — Hormuz plus Bab al-Mandab — would spike energy and shipping insurance, accelerate the bifurcation of global trade routes, and hand tailwinds to Arctic/overland logistics, defense-tech, drone-defense, and energy-independence startups. Persistent ~$100 oil reshuffles capital toward hydrocarbons and nuclear, undermines EV/transition narratives, and gives China leverage as the residual buyer of sanctioned Iranian crude.</div>
+        <div class="systems"><b>Systems view →</b> A 'going silent' posture between nuclear-adjacent adversaries removes the diplomatic shock-absorbers that prevent miscalculation, while proxy escalation via Hezbollah and the Houthis externalizes the costs of confrontation onto civilians in Lebanon, Yemen, and Gulf states with no seat at the table. Second-order: sustained energy shocks regressively tax the global poor, fuel food-price-driven instability across import-dependent states, and deepen the militarization of commercial shipping — normalizing private navies and surveillance infrastructure as permanent fixtures. Third-order: each cycle of blockade-and-strike erodes the post-WWII norm that maritime commons are neutral, accelerates a multipolar arms race in missiles and drones, and trains domestic publics to accept permanent low-grade war as background noise — a coordination failure where no actor can de-escalate without appearing weak.</div>
+      </li>
+    </ul>
+  </section>
+  <section id="watch_list">
+    <h2>👀 Watch List</h2>
+    <ul class="items">
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/Qd1-avea-robotics-the-human-in-the-loop-system-for-robots" target="_blank" rel="noopener">Avea Robotics - The human-in-the-loop system for robots</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-06-01</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">Avea Robotics (YC Spring 2026) offers remote human teleoperators who intervene when deployed robots fail or hit edge cases, keeping fleets at 100% uptime. It's a human-in-the-loop service layer sold as infrastructure for robotics operators.</p>
+        <div class="impact"><b>So what →</b> This is the picks-and-shovels play for the coming robot deployment wave: every warehouse, delivery, and industrial robotics startup needs an intervention layer before full autonomy ships, and a centralized teleop network could become the AWS of physical autonomy. It also quietly creates a massive labeled-edge-case dataset, potentially making the teleop provider the dominant trainer of next-gen robot foundation models.</div>
+        <div class="systems"><b>Systems view →</b> A global teleop layer concentrates control of physical-world robots in a few operators' hands — a single compromised or coerced provider could remotely halt or misuse fleets across critical infrastructure (logistics, eldercare, agriculture). The labor model likely routes intervention work to low-wage geographies doing high-stress, surveilled micro-tasks at machine pace, repeating the content-moderation playbook with worse psychological externalities and zero career ladder. And by hiding the 'not-yet-autonomous' gap behind invisible humans, the industry can claim autonomy capabilities it doesn't have, distorting capital allocation, regulatory posture, and public trust until the scaffolding silently becomes load-bearing across the economy.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/Qd6-bloom-the-brand-layer-for-agents" target="_blank" rel="noopener">Bloom – the brand layer for agents</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-06-01</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">Bloom (YC Spring 2026) is building a 'brand layer for agents' — infrastructure that lets companies expose their brand, catalog, and actions in a structured way so AI agents can call them directly. Positions brands as callable APIs in an agent-mediated commerce stack.</p>
+        <div class="impact"><b>So what →</b> If agents become the default shopping/booking interface, whoever owns the brand-to-agent protocol layer becomes the new SEO+Shopify+ad-network bundle — a chokepoint between every consumer brand and every LLM. Accelerates the collapse of the open web's discovery economy and pushes capital toward agent-native commerce rails, with obvious M&A bait for OpenAI/Google/Stripe.</div>
+        <div class="systems"><b>Systems view →</b> An agent-mediated commerce layer hollows out the public web: brands stop investing in human-facing storefronts, content, and search-visible pages because the real customer is now a model — degrading the substrate that humans (and training data) depend on for sense-making. It concentrates epistemic and economic power in whoever sets the agent protocol and ranks brands inside it, recreating platform monopolies one level up while making price discrimination, dark patterns, and manipulation invisible to the human who never sees the comparison. Second-order: marketing labor displacement, loss of serendipitous discovery, and a consumer culture where 'choice' is laundered through an agent optimizing for opaque objectives — likely the platform's take rate, not the user's wellbeing.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://www.ycombinator.com/launches/Qcw-bentolabs-ai-monitoring-and-learning-layer-for-long-running-agents" target="_blank" rel="noopener">BentoLabs AI: Monitoring and Learning layer for long-running agents</a>
+        <div class="meta-row">
+          <span class="tag">YC Launches</span>
+<span>2026-06-01</span>          <span class="tag">score 12</span>
+        </div>
+        <p class="summary">BentoLabs AI (YC Spring 2026) provides a monitoring and learning layer for long-running AI agents, capturing production failures and feeding them back as improvements without requiring model upgrades.</p>
+        <div class="impact"><b>So what →</b> Continuous learning from production traces could become the moat for agentic startups, decoupling competitive advantage from frontier model access and shifting value toward proprietary failure datasets. If it works, it accelerates the agent economy by making mid-tier models behave like top-tier ones, pressuring foundation labs' pricing power.</div>
+        <div class="systems"><b>Systems view →</b> A learning layer that silently absorbs every production failure creates dense behavioral datasets on end-users and operators, with ambiguous consent boundaries — agents 'improving' from observed human corrections is surveillance dressed as reliability. Second-order: as agents become incrementally more autonomous and self-correcting, the human oversight loop atrophies, eroding the institutional capacity to detect when agents are wrong in novel ways; failures become rarer but more correlated and catastrophic. Third-order: capital concentrates around whoever owns the largest cross-customer behavior corpus, and labor displacement accelerates because the main blocker to agent deployment — brittleness — gets quietly solved without public debate about which jobs just became automatable.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/06/01/water-access-is-now-a-risk-factor-in-spacexs-ipo/" target="_blank" rel="noopener">Water access is now a risk factor in SpaceX’s IPO</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-06-01</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">SpaceX amended its IPO filing to list water access as a critical risk factor alongside power, citing the cooling demands of xAI data centers and exposure to drought, local competition, and regulatory restrictions on water use.</p>
+        <div class="impact"><b>So what →</b> Water is becoming a hard constraint on the AI buildout, turning hydrology into a strategic asset class — expect a wave of startups in dry cooling, immersion, atmospheric water harvesting, and water-rights arbitrage, plus sovereign-level competition where wet jurisdictions (Nordics, Quebec, Gulf states with desalination) outbid drought-stressed US Sun Belt regions for hyperscale capacity.</div>
+        <div class="systems"><b>Systems view →</b> Hyperscalers competing with farms and municipalities for aquifers privatizes a commons under climate stress, accelerating localized droughts and shifting water costs onto rural and lower-income communities who lack the legal muscle to fight Musk-tier capex. The second-order move is regulatory capture: as water becomes the binding constraint on AI, well-capitalized firms will lobby to reclassify their usage as critical infrastructure, eroding democratic control over basic resources and entrenching a new extractive layer where compute literally drinks the watershed. Third-order, this binds civilizational cognition (the AI substrate) to ecological collapse vectors, meaning a future drought is no longer just an agricultural crisis but a simultaneous epistemic and economic one.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/" target="_blank" rel="noopener">Zigging when most are zagging, ex-Meta CTO raises $250M climate fund</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-06-01</span>          <span class="tag">score 9</span>
+        </div>
+        <p class="summary">Mike Schroepfer's Gigascale Capital raised a $250M early-stage fund focused on energy, grid infrastructure, and critical minerals under a climate-tech thesis, despite broader VC sentiment souring on climate. The fund rides AI's surging power demand, betting that startups offering cheaper/faster/more reliable energy and 'bring-your-own-power' solutions will win on economics alone.</p>
+        <div class="impact"><b>So what →</b> Validates a re-coupling of climate tech and AI infrastructure capex — energy startups become picks-and-shovels plays for the AI buildout, not ESG bets. Expect a wave of behind-the-meter power, fusion, geothermal, and critical-mineral startups getting funded as hyperscalers and industrials bypass utility waitlists, potentially shifting power sovereignty from utilities to private compute operators.</div>
+        <div class="systems"><b>Systems view →</b> Framing climate impact as a 'byproduct' of cheaper energy quietly subordinates ecological goals to AI compute demand — decarbonization happens only where it pencils out for data centers, leaving harder-to-abate sectors orphaned. Privatized 'bring-your-own-power' regimes fragment the grid into corporate islands, eroding the public utility model and concentrating energy sovereignty in the same hyperscalers already dominating compute, attention, and increasingly cognition itself. Critical-minerals demand accelerates extractive frontiers (deep-sea, Indigenous lands, geopolitical flashpoints like DRC/Indonesia/Greenland), and the AI-energy flywheel locks civilization into a path where questioning compute growth becomes economically and politically unthinkable.</div>
+      </li>
+      <li class="item">
+        <a class="title" href="https://techcrunch.com/2026/06/01/strava-declares-war-on-scrapers-ahead-of-ipo/" target="_blank" rel="noopener">Strava declares war on scrapers ahead of IPO</a>
+        <div class="meta-row">
+          <span class="tag">TechCrunch</span>
+<span>2026-06-01</span>          <span class="tag">score 9</span>
+        </div>
+        <div class="impact"><b>So what →</b> _(LLM enrichment failed and no source summary available.)_</div>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    Radar · iceberg-spotting for ideation · feed it back into <code>radar/trends/</code> over time.
+  </footer>
+</div>
+</body>
+</html>
